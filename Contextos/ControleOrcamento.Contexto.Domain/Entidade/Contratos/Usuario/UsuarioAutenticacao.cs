@@ -34,8 +34,8 @@ namespace ControleOrcamento.Contexto.Domain.Entidade.Contratos.Usuario
         /// </exception>
         public UsuarioAutenticacao(string login, SenhaSecreta senha)
         {
-            Login = login ?? throw new ArgumentNullException("Não informado login do usuário", nameof(login));
-            Senha = senha ?? throw new ArgumentNullException("Não informada senha", nameof(senha));
+            Login = login ?? throw new ArgumentNullException(nameof(login), "Não informado login do usuário");
+            Senha = senha ?? throw new ArgumentNullException(nameof(senha), "Não informada senha");
             if (senha.Invalid)
             {
                 throw new ArgumentException(senha.Notifications.ToString(), nameof(senha));

@@ -11,7 +11,7 @@ namespace ControleOrcamento.Contexto.Domain.Entidade
         /// <summary>
         /// Contrutor de uma entidade
         /// </summary>
-        public EntidadeBase()
+        protected EntidadeBase()
         {
             Id = Guid.NewGuid();
         }

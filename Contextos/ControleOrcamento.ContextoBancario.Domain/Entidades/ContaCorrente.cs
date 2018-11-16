@@ -43,10 +43,10 @@ namespace ControleOrcamento.ContextoBancario.Domain.Entidades
         /// </exception>
         public ContaCorrente(UsuarioBase usuario, Agencia agencia, string numero, string dv)
         {
-            Usuario = usuario ?? throw new ArgumentNullException("Não informado usuário da conta corrente", nameof(usuario));
-            Agencia = agencia ?? throw new ArgumentNullException("Não informada agência da conta corrente", nameof(agencia));
-            Numero = numero ?? throw new ArgumentNullException("Não informado número da conta corrente", nameof(numero));
-            DV = dv ?? throw new ArgumentNullException("Não informado o DV da conta corrente", nameof(dv));
+            Usuario = usuario ?? throw new ArgumentNullException(nameof(usuario), "Não informado usuário da conta corrente");
+            Agencia = agencia ?? throw new ArgumentNullException(nameof(agencia), "Não informada agência da conta corrente");
+            Numero = numero ?? throw new ArgumentNullException(nameof(numero), "Não informado número da conta corrente");
+            DV = dv ?? throw new ArgumentNullException(nameof(dv), "Não informado o DV da conta corrente");
         }
 
         /// <summary>

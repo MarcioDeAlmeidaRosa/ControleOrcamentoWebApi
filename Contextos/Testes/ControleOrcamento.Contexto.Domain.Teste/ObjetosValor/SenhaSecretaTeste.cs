@@ -8,31 +8,11 @@ namespace ControleOrcamento.Contexto.Domain.Teste.ObjetosValor
     {
         [DataTestMethod]
         [DataRow("123456")]
-        public void DeveRetornarErroPorSomenteNumero(string senhaTeste)
-        {
-            var senha = new SenhaSecreta(senhaTeste);
-            Assert.IsTrue(senha.Invalid);
-        }
-
-        [DataTestMethod]
         [DataRow("asdfgh")]
-        public void DeveRetornarErroPorSomenteLetras(string senhaTeste)
-        {
-            var senha = new SenhaSecreta(senhaTeste);
-            Assert.IsTrue(senha.Invalid);
-        }
-
-        [DataTestMethod]
-        [DataRow("123456*")]
-        public void DeveRetornarErroPorNaoConterLetras(string senhaTeste)
-        {
-            var senha = new SenhaSecreta(senhaTeste);
-            Assert.IsTrue(senha.Invalid);
-        }
-
-        [DataTestMethod]
+        [DataRow("12345A")]
         [DataRow("asdfgh*")]
-        public void DeveRetornarErroPorNaoConterNumeros(string senhaTeste)
+        [DataRow("123456*")]
+        public void DeveRetornarErroPorSomenteNumero(string senhaTeste)
         {
             var senha = new SenhaSecreta(senhaTeste);
             Assert.IsTrue(senha.Invalid);
@@ -41,14 +21,6 @@ namespace ControleOrcamento.Contexto.Domain.Teste.ObjetosValor
         [DataTestMethod]
         [DataRow("asdfg1")]
         public void DeveRetornarSucessoLetrasESomenteUmNumero(string senhaTeste)
-        {
-            var senha = new SenhaSecreta(senhaTeste);
-            Assert.IsTrue(!senha.Invalid);
-        }
-
-        [DataTestMethod]
-        [DataRow("12345A")]
-        public void DeveRetornarSucessoNumerosESomenteUmaLetra(string senhaTeste)
         {
             var senha = new SenhaSecreta(senhaTeste);
             Assert.IsTrue(!senha.Invalid);
