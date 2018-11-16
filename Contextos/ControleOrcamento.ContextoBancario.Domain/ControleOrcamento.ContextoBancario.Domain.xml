@@ -1,0 +1,135 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ControleOrcamento.ContextoBancario.Domain</name>
+    </assembly>
+    <members>
+        <member name="T:ControleOrcamento.ContextoBancario.Domain.Entidades.Agencia">
+            <summary>
+            Representa uma agência bancária no mundo real
+            </summary>
+        </member>
+        <member name="P:ControleOrcamento.ContextoBancario.Domain.Entidades.Agencia.Usuario">
+            <summary>
+            Representa o usuário do registro
+            </summary>
+        </member>
+        <member name="P:ControleOrcamento.ContextoBancario.Domain.Entidades.Agencia.Banco">
+            <summary>
+            Representa o banco da agência bancária no mundo real
+            </summary>
+        </member>
+        <member name="P:ControleOrcamento.ContextoBancario.Domain.Entidades.Agencia.Numero">
+            <summary>
+            Representa o número da agência bancária no mundo real
+            </summary>
+        </member>
+        <member name="P:ControleOrcamento.ContextoBancario.Domain.Entidades.Agencia.DV">
+            <summary>
+            Representa o dígito verificador da agência bancária no mundo real
+            </summary>
+        </member>
+        <member name="M:ControleOrcamento.ContextoBancario.Domain.Entidades.Agencia.#ctor(ControleOrcamento.Contexto.Domain.Entidade.Contratos.Usuario.UsuarioBase,ControleOrcamento.ContextoBancario.Domain.Entidades.Banco,System.String,System.String)">
+            <summary>
+            Cria nova agência garantindo seu estado válido
+            </summary>
+            <param name="usuario">Usuário responsável pela agência</param>
+            <param name="banco">Banco da agência</param>
+            <param name="numero">Número da agência</param>
+            <param name="dv">DV da agência</param>
+            <exception cref="T:System.ArgumentNullException">Lançado quando não for informado qualquer das propriedades:
+            <paramref name="usuario"/>
+            <paramref name="banco"/>
+            <paramref name="numero"/>
+            </exception>
+        </member>
+        <member name="M:ControleOrcamento.ContextoBancario.Domain.Entidades.Agencia.#ctor">
+            <summary>
+            Construtor necessário para o ORM
+            </summary>
+        </member>
+        <member name="T:ControleOrcamento.ContextoBancario.Domain.Entidades.Banco">
+            <summary>
+            Representa um banco no mundo real
+            </summary>
+        </member>
+        <member name="P:ControleOrcamento.ContextoBancario.Domain.Entidades.Banco.Usuario">
+            <summary>
+            Representa o usuário do registro
+            </summary>
+        </member>
+        <member name="P:ControleOrcamento.ContextoBancario.Domain.Entidades.Banco.Numero">
+            <summary>
+            Representa o número do banco no mundo real
+            </summary>
+        </member>
+        <member name="P:ControleOrcamento.ContextoBancario.Domain.Entidades.Banco.Nome">
+            <summary>
+            Representa o nome do banco no mundo real
+            </summary>
+        </member>
+        <member name="M:ControleOrcamento.ContextoBancario.Domain.Entidades.Banco.#ctor(ControleOrcamento.Contexto.Domain.Entidade.Contratos.Usuario.UsuarioBase,System.String,System.String)">
+            <summary>
+            Cria novo banco garantindo seu estado válido
+            </summary>
+            <param name="usuario">Usuário responsável pelo banco</param>
+            <param name="numero">Número do banco</param>
+            <param name="nome">Nome do banco</param>
+            <exception cref="T:System.ArgumentNullException">Lançado quando não for informado qualquer das propriedades:
+            <paramref name="usuario"/>
+            <paramref name="numero"/>
+            <paramref name="nome"/>
+            </exception>
+        </member>
+        <member name="M:ControleOrcamento.ContextoBancario.Domain.Entidades.Banco.#ctor">
+            <summary>
+            Construtor necessário para o ORM
+            </summary>
+        </member>
+        <member name="T:ControleOrcamento.ContextoBancario.Domain.Entidades.ContaCorrente">
+            <summary>
+            Representa uma conta corrente no mundo real
+            </summary>
+        </member>
+        <member name="P:ControleOrcamento.ContextoBancario.Domain.Entidades.ContaCorrente.Usuario">
+            <summary>
+            Representa o usuário do registro
+            </summary>
+        </member>
+        <member name="P:ControleOrcamento.ContextoBancario.Domain.Entidades.ContaCorrente.Agencia">
+            <summary>
+            Representa a agência bancária da conta corrente no mundo real
+            </summary>
+        </member>
+        <member name="P:ControleOrcamento.ContextoBancario.Domain.Entidades.ContaCorrente.Numero">
+            <summary>
+            Representa o número da conta corrente no mundo real
+            </summary>
+        </member>
+        <member name="P:ControleOrcamento.ContextoBancario.Domain.Entidades.ContaCorrente.DV">
+            <summary>
+            Representa o DV da conta corrente no mundo real
+            </summary>
+        </member>
+        <member name="M:ControleOrcamento.ContextoBancario.Domain.Entidades.ContaCorrente.#ctor(ControleOrcamento.Contexto.Domain.Entidade.Contratos.Usuario.UsuarioBase,ControleOrcamento.ContextoBancario.Domain.Entidades.Agencia,System.String,System.String)">
+            <summary>
+            Cria nova conta corrente garantindo seu estado válido
+            </summary>
+            <param name="usuario">Usuário responsável pela conta corrente</param>
+            <param name="agencia">Agência da conta corrente</param>
+            <param name="numero">Número da conta corrente</param>
+            <param name="dv">DV da conta corrente</param>
+            <exception cref="T:System.ArgumentNullException">Lançado quando não for informado qualquer das propriedades:
+            <paramref name="usuario"/>
+            <paramref name="agencia"/>
+            <paramref name="numero"/>
+            <paramref name="dv"/>
+            </exception>
+        </member>
+        <member name="M:ControleOrcamento.ContextoBancario.Domain.Entidades.ContaCorrente.#ctor">
+            <summary>
+            Construtor necessário para o ORM
+            </summary>
+        </member>
+    </members>
+</doc>

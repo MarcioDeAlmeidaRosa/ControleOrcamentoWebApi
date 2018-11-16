@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ControleOrcamento.ContextoUsuario.Domain</name>
+    </assembly>
+    <members>
+        <member name="T:ControleOrcamento.ContextoUsuario.Domain.Entidades.UsuarioConvidado">
+            <summary>
+            Representa um usuário comum da aplicação
+            </summary>
+        </member>
+        <member name="M:ControleOrcamento.ContextoUsuario.Domain.Entidades.UsuarioConvidado.#ctor">
+            <summary>
+            Construtor necessário para o ORM
+            </summary>
+        </member>
+        <member name="T:ControleOrcamento.ContextoUsuario.Domain.Entidades.UsuarioMaster">
+            <summary>
+            Representa um usuário master da conta principal da aplicação
+            </summary>
+        </member>
+        <member name="P:ControleOrcamento.ContextoUsuario.Domain.Entidades.UsuarioMaster.Convidados">
+            <summary>
+            Representa os usuários convidados pela conta principal
+            para contribuírem no controle do orçamento
+            Exemplo seria uma família, responsável financeiro da casa,
+            convida os interessados para compartilhar os gastos da casa,
+            assim você cria uma conciência financeira na família, de quais
+            os custos para manter a casa
+            </summary>
+        </member>
+        <member name="M:ControleOrcamento.ContextoUsuario.Domain.Entidades.UsuarioMaster.#ctor">
+            <summary>
+            Construtor necessário para o ORM
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>C:\REPOS\GITHUB\ControleOrcamentoWebApi\Contextos\ControleOrcamento.ContextoBancario.Domain\ControleOrcamento.ContextoBancario.Domain.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Flunt" Version="1.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ControleOrcamento.Contexto.Domain\ControleOrcamento.Contexto.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Comandos\" />
+    <Folder Include="Enums\" />
+    <Folder Include="Manipuladores\" />
+    <Folder Include="Pesquisas\" />
+    <Folder Include="Repositorios\" />
+    <Folder Include="Servicos\" />
+  </ItemGroup>
+
+</Project>

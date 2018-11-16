@@ -1,0 +1,144 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ControleOrcamento.Contexto.Domain</name>
+    </assembly>
+    <members>
+        <member name="T:ControleOrcamento.Contexto.Domain.Entidade.Contratos.Usuario.UsuarioAutenticacao">
+            <summary>
+            Representa um usuário que quer se autenticar na aplicação
+            </summary>
+        </member>
+        <member name="P:ControleOrcamento.Contexto.Domain.Entidade.Contratos.Usuario.UsuarioAutenticacao.Login">
+            <summary>
+            Representa o usuário para autenticação na aplicação
+            </summary>
+        </member>
+        <member name="P:ControleOrcamento.Contexto.Domain.Entidade.Contratos.Usuario.UsuarioAutenticacao.Senha">
+            <summary>
+            Representa a senha do usuário para autenticação na aplicação
+            </summary>
+        </member>
+        <member name="P:ControleOrcamento.Contexto.Domain.Entidade.Contratos.Usuario.UsuarioAutenticacao.HashAutenticacao">
+            <summary>
+            Representa o hash usado para a criptografica da senha
+            </summary>
+        </member>
+        <member name="M:ControleOrcamento.Contexto.Domain.Entidade.Contratos.Usuario.UsuarioAutenticacao.#ctor(System.String,ControleOrcamento.Contexto.Domain.ObjetosValor.SenhaSecreta)">
+            <summary>
+            Cria usuário para efetuar login na aplicação
+            </summary>
+            <param name="login">Login do usuário para acessar a aplicação</param>
+            <param name="senha">Senha do usuário para acessar a aplicação</param>
+            <exception cref="T:System.ArgumentNullException">Lançado quando não for informado qualquer das propriedades:
+            <paramref name="login"/>
+            <paramref name="senha"/>
+            </exception>
+        </member>
+        <member name="M:ControleOrcamento.Contexto.Domain.Entidade.Contratos.Usuario.UsuarioAutenticacao.#ctor">
+            <summary>
+            Construtor necessário para o ORM
+            </summary>
+        </member>
+        <member name="T:ControleOrcamento.Contexto.Domain.Entidade.Contratos.Usuario.UsuarioBase">
+            <summary>
+            Representa um usuário registrado na aplicação
+            </summary>
+        </member>
+        <member name="P:ControleOrcamento.Contexto.Domain.Entidade.Contratos.Usuario.UsuarioBase.Nome">
+            <summary>
+            Representa o nome do usuário da aplicação
+            </summary>
+        </member>
+        <member name="T:ControleOrcamento.Contexto.Domain.Entidade.Contratos.Usuario.UsuarioCandidato">
+            <summary>
+            Representa as informações básicas de um usuário da aplicação
+            </summary>
+        </member>
+        <member name="P:ControleOrcamento.Contexto.Domain.Entidade.Contratos.Usuario.UsuarioCandidato.Email">
+            <summary>
+            Representa o e-mail da conta do usuário da aplicaçãao
+            </summary>
+        </member>
+        <member name="T:ControleOrcamento.Contexto.Domain.Entidade.EntidadeBase">
+            <summary>
+            Representa a definição de uma entidade
+            </summary>
+        </member>
+        <member name="M:ControleOrcamento.Contexto.Domain.Entidade.EntidadeBase.#ctor">
+            <summary>
+            Contrutor de uma entidade
+            </summary>
+        </member>
+        <member name="P:ControleOrcamento.Contexto.Domain.Entidade.EntidadeBase.Id">
+            <summary>
+            Representa o identificador do registro na aplicação
+            </summary>
+        </member>
+        <member name="T:ControleOrcamento.Contexto.Domain.ObjetosValor.Email">
+            <summary>
+            Representa um e-mail válido na aplicação
+            </summary>
+        </member>
+        <member name="P:ControleOrcamento.Contexto.Domain.ObjetosValor.Email.Endereco">
+            <summary>
+            Representa um endereço de e-mail válido
+            </summary>
+        </member>
+        <member name="M:ControleOrcamento.Contexto.Domain.ObjetosValor.Email.#ctor(System.String)">
+            <summary>
+            Cria um endereço de e-mail válido
+            </summary>
+            <param name="endereco">Endereço de e-mail</param>
+        </member>
+        <member name="T:ControleOrcamento.Contexto.Domain.ObjetosValor.NomePessoa">
+            <summary>
+            Representa um nome válido na aplicação
+            </summary>
+        </member>
+        <member name="P:ControleOrcamento.Contexto.Domain.ObjetosValor.NomePessoa.Nome">
+            <summary>
+            Representa o primeiro nome da pessoa
+            </summary>
+        </member>
+        <member name="P:ControleOrcamento.Contexto.Domain.ObjetosValor.NomePessoa.SobreNome">
+            <summary>
+            Representa o sobrenome da pessoa
+            </summary>
+        </member>
+        <member name="M:ControleOrcamento.Contexto.Domain.ObjetosValor.NomePessoa.#ctor(System.String,System.String)">
+            <summary>
+            Cria um nome válido para a aplicação
+            </summary>
+            <param name="nome">Primeiro nome da pessoa</param>
+            <param name="sobrenome">Sobrenome da pessoa</param>
+        </member>
+        <member name="M:ControleOrcamento.Contexto.Domain.ObjetosValor.NomePessoa.ToString">
+            <summary>
+            Concatena <see cref="P:ControleOrcamento.Contexto.Domain.ObjetosValor.NomePessoa.Nome"/> e <see cref="P:ControleOrcamento.Contexto.Domain.ObjetosValor.NomePessoa.SobreNome"/>
+            </summary>
+            <returns>Retorna o nome completo da pessoa</returns>
+        </member>
+        <member name="T:ControleOrcamento.Contexto.Domain.ObjetosValor.ObjetoValor">
+            <summary>
+            Define propriedades simples que sofrerão validações do seu contaúdo
+            </summary>
+        </member>
+        <member name="T:ControleOrcamento.Contexto.Domain.ObjetosValor.SenhaSecreta">
+            <summary>
+            Representa uma senha válida na aplicação
+            </summary>
+        </member>
+        <member name="P:ControleOrcamento.Contexto.Domain.ObjetosValor.SenhaSecreta.Senha">
+            <summary>
+            Representa a senha válida
+            </summary>
+        </member>
+        <member name="M:ControleOrcamento.Contexto.Domain.ObjetosValor.SenhaSecreta.#ctor(System.String)">
+            <summary>
+            Cria uma senha válida
+            </summary>
+            <param name="senha"></param>
+        </member>
+    </members>
+</doc>
