@@ -42,9 +42,9 @@ namespace ControleOrcamento.ContextoBancario.Domain.Entidades
         /// </exception>
         public Agencia(UsuarioBase usuario, Banco banco, string numero, string dv)
         {
-            Usuario = usuario ?? throw new ArgumentNullException("Não informado usuário da agência", nameof(usuario));
-            Banco = banco ?? throw new ArgumentNullException("Não informado banco da agência", nameof(banco));
-            Numero = numero ?? throw new ArgumentNullException("Não informado número da agência", nameof(numero));
+            Usuario = usuario ?? throw new ArgumentNullException(nameof(usuario), "Não informado usuário da agência");
+            Banco = banco ?? throw new ArgumentNullException(nameof(banco), "Não informado banco da agência");
+            Numero = numero ?? throw new ArgumentNullException(nameof(numero), "Não informado número da agência");
             DV = dv;
         }
 

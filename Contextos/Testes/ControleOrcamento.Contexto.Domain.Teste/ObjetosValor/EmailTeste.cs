@@ -14,15 +14,8 @@ namespace ControleOrcamento.Contexto.Domain.Teste.ObjetosValor
         [DataRow("marcio@rosa@yahoo.com.br")]
         [DataRow("marcio;rosa@yahoo.com.br")]
         [DataRow("@gmail.com")]
-        public void DeveRetornarEmailInvalido(string emailTeste)
-        {
-            var email = new Email(emailTeste);
-            Assert.IsTrue(email.Invalid);
-        }
-
-        [DataTestMethod]
         [DataRow("")]
-        public void DeveRetornarEmailObrigatorio(string emailTeste)
+        public void DeveRetornarEmailInvalido(string emailTeste)
         {
             var email = new Email(emailTeste);
             Assert.IsTrue(email.Invalid);

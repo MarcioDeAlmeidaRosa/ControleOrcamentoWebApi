@@ -23,7 +23,7 @@ namespace ControleOrcamento.Contexto.Domain.Teste.Entidade
         [ExpectedException(typeof(ArgumentException))]
         public void DeveLancarErroSenhaForaDoPadrao(string login, string senha)
         {
-            var usuario = new UsuarioAutenticacao(login, new SenhaSecreta(senha));
+            new UsuarioAutenticacao(login, new SenhaSecreta(senha));
         }
     }
 }
