@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProjectInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sonarsource.com/msbuild/integration/2015/1">
+  <ProjectName>ControleOrcamento.ContextoBancario.Domain</ProjectName>
+  <ProjectLanguage>C#</ProjectLanguage>
+  <ProjectType>Product</ProjectType>
+  <ProjectGuid>93bf0e44-7a38-49a2-9146-b7e89679ecb2</ProjectGuid>
+  <FullPath>D:\GIT\ControleOrcamentoWebApi\Contextos\ControleOrcamento.ContextoBancario.Domain\ControleOrcamento.ContextoBancario.Domain.csproj</FullPath>
+  <IsExcluded>false</IsExcluded>
+  <AnalysisResults>
+    <AnalysisResult Id="FilesToAnalyze" Location="D:\GIT\ControleOrcamentoWebApi\.sonarqube\out\3\FilesToAnalyze.txt" />
+  </AnalysisResults>
+  <AnalysisSettings>
+    <Property Name="sonar.cs.roslyn.reportFilePath">D:\GIT\ControleOrcamentoWebApi\Contextos\ControleOrcamento.ContextoBancario.Domain\bin\Debug\netcoreapp2.1\ControleOrcamento.ContextoBancario.Domain.dll.RoslynCA.json</Property>
+    <Property Name="sonar.cs.analyzer.projectOutPath">D:\GIT\ControleOrcamentoWebApi\.sonarqube\out\3</Property>
+  </AnalysisSettings>
+  <Configuration>Debug</Configuration>
+  <Platform>AnyCPU</Platform>
+  <TargetFramework>netcoreapp2.1</TargetFramework>
+</ProjectInfo>

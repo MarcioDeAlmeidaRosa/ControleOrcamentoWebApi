@@ -1,0 +1,9 @@
+…
+|D:\GIT\ControleOrcamentoWebApi\Contextos\ControleOrcamento.Contexto.Domain\Entidade\Contratos\Usuario\UsuarioAutenticacao.csutf-8}
+tD:\GIT\ControleOrcamentoWebApi\Contextos\ControleOrcamento.Contexto.Domain\Entidade\Contratos\Usuario\UsuarioBase.csutf-8‚
+yD:\GIT\ControleOrcamentoWebApi\Contextos\ControleOrcamento.Contexto.Domain\Entidade\Contratos\Usuario\UsuarioCandidato.csutf-8l
+cD:\GIT\ControleOrcamentoWebApi\Contextos\ControleOrcamento.Contexto.Domain\Entidade\EntidadeBase.csutf-8i
+`D:\GIT\ControleOrcamentoWebApi\Contextos\ControleOrcamento.Contexto.Domain\ObjetosValor\Email.csutf-8n
+eD:\GIT\ControleOrcamentoWebApi\Contextos\ControleOrcamento.Contexto.Domain\ObjetosValor\NomePessoa.csutf-8o
+fD:\GIT\ControleOrcamentoWebApi\Contextos\ControleOrcamento.Contexto.Domain\ObjetosValor\ObjetoValor.csutf-8p
+gD:\GIT\ControleOrcamentoWebApi\Contextos\ControleOrcamento.Contexto.Domain\ObjetosValor\SenhaSecreta.csutf-8

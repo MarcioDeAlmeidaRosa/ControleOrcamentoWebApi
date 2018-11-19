@@ -1,0 +1,11 @@
+~
+|D:\GIT\ControleOrcamentoWebApi\Contextos\ControleOrcamento.Contexto.Domain\Entidade\Contratos\Usuario\UsuarioAutenticacao.csv
+tD:\GIT\ControleOrcamentoWebApi\Contextos\ControleOrcamento.Contexto.Domain\Entidade\Contratos\Usuario\UsuarioBase.cs{
+yD:\GIT\ControleOrcamentoWebApi\Contextos\ControleOrcamento.Contexto.Domain\Entidade\Contratos\Usuario\UsuarioCandidato.cse
+cD:\GIT\ControleOrcamentoWebApi\Contextos\ControleOrcamento.Contexto.Domain\Entidade\EntidadeBase.csb
+`D:\GIT\ControleOrcamentoWebApi\Contextos\ControleOrcamento.Contexto.Domain\ObjetosValor\Email.csg
+eD:\GIT\ControleOrcamentoWebApi\Contextos\ControleOrcamento.Contexto.Domain\ObjetosValor\NomePessoa.csh
+fD:\GIT\ControleOrcamentoWebApi\Contextos\ControleOrcamento.Contexto.Domain\ObjetosValor\ObjetoValor.csi
+gD:\GIT\ControleOrcamentoWebApi\Contextos\ControleOrcamento.Contexto.Domain\ObjetosValor\SenhaSecreta.csT
+PC:\Users\marci\AppData\Local\Temp\.NETCoreApp,Version=v2.1.AssemblyAttributes.cs™
+”D:\GIT\ControleOrcamentoWebApi\Contextos\ControleOrcamento.Contexto.Domain\obj\Debug\netcoreapp2.1\ControleOrcamento.Contexto.Domain.AssemblyInfo.cs
