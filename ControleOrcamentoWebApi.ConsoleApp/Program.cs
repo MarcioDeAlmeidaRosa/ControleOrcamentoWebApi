@@ -6,7 +6,7 @@ namespace ControleOrcamentoWebApi.ConsoleApp
     {
         static void Main(string[] args)
         {
-            teasfasddsa
+            //teasfasddsa
             Console.WriteLine("Hello World!");
         }
     }
