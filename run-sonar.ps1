@@ -52,7 +52,7 @@ if ($env:APPVEYOR_REPO_NAME -eq $github) {
 
     #msbuild /t:Rebuild $projectFile /p:targetFrameworks=$framework /verbosity:minimal
 
-    SonarScanner.MSBuild.exe end /d:"sonar.login=$sonar_token"
+    SonarScanner.MSBuild.exe end /d:"sonar.login=$sonarToken"
 }
 else {
     Write-Output "Sonar: not running as we're on '$env:APPVEYOR_REPO_NAME'"
