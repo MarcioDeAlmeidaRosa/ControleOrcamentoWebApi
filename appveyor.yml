@@ -2,11 +2,11 @@ version: 4.5.0-{build}
 image: Visual Studio 2017
 configuration: Release
 clone_folder: c:\projects\ControleOrcamentoWebApi
-environment:
-  github_auth_token:
-    secure: WYvd/k1xGCsDS+4iOhjzxA5/e36RjkxnuVOHpBR+eDtZNNjpYydCyNfd1COME9jI
-  sonar_token:
-    secure: d1acfe8a3a3dbb679f3e36cf2c45b80cc06f2fc1
+#environment:
+#  github_auth_token:
+#    secure: WYvd/k1xGCsDS+4iOhjzxA5/e36RjkxnuVOHpBR+eDtZNNjpYydCyNfd1COME9jI
+#  sonar_token:
+#    secure: d1acfe8a3a3dbb679f3e36cf2c45b80cc06f2fc1
 
 install:
   - '"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\Tools\VsDevCmd.bat"'
