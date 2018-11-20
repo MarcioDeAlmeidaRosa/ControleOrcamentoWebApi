@@ -21,15 +21,16 @@ install:
 
   # Restore dependencies
   - dotnet restore Contextos/ControleOrcamento.Contexto.Domain
-  #- dotnet restore src/NLogAutoLoadExtension
+  - dotnet restore Contextos/ControleOrcamento.ContextoBancario.Domain
+  - dotnet restore Contextos/ControleOrcamento.ContextoUsuario.Domain
 
-  #- dotnet restore tests/SampleExtensions
-
-  #- dotnet restore tests/NLog.UnitTests
+  - dotnet restore Contextos/Testes/ControleOrcamento.Contexto.Domain.Teste
+  - dotnet restore Contextos/Testes/ControleOrcamento.ContextoBancario.Domain.Teste
+  - dotnet restore Contextos/Testes/ControleOrcamento.ContextoUsuario.Domain.Teste
 
 script:
   # Run tests
-  #- dotnet test tests/NLog.UnitTests --configuration Release --framework netcoreapp2.0
+  - dotnet test Contextos/Testes/ControleOrcamento.Contexto.Domain.Teste --configuration Release --framework netcoreapp2.1
 
   #- dotnet msbuild /t:Restore /p:targetframework=net452 /p:monobuild=1 src/NLog
   #- dotnet msbuild /t:Restore /p:targetframework=net452 /p:monobuild=1 tests/NLog.UnitTests
