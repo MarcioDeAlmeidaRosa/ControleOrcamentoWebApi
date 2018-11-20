@@ -1,4 +1,5 @@
-p
-gD:\GIT\ControleOrcamentoWebApi\Contextos\ControleOrcamento.ContextoBancario.Domain\Entidades\Agencia.csutf-8n
-eD:\GIT\ControleOrcamentoWebApi\Contextos\ControleOrcamento.ContextoBancario.Domain\Entidades\Banco.csutf-8v
-mD:\GIT\ControleOrcamentoWebApi\Contextos\ControleOrcamento.ContextoBancario.Domain\Entidades\ContaCorrente.csutf-8
+…
+|D:\GIT\ControleOrcamentoWebApi\Contextos\Testes\ControleOrcamento.Contexto.Domain.Teste\Entidade\UsuarioAutenticacaoTeste.csutf-8{
+rD:\GIT\ControleOrcamentoWebApi\Contextos\Testes\ControleOrcamento.Contexto.Domain.Teste\ObjetosValor\EmailTeste.csutf-8€
+wD:\GIT\ControleOrcamentoWebApi\Contextos\Testes\ControleOrcamento.Contexto.Domain.Teste\ObjetosValor\NomePessoaTeste.csutf-8‚
+yD:\GIT\ControleOrcamentoWebApi\Contextos\Testes\ControleOrcamento.Contexto.Domain.Teste\ObjetosValor\SenhaSecretaTeste.csutf-8

@@ -1,5 +1,3 @@
-…
-|D:\GIT\ControleOrcamentoWebApi\Contextos\Testes\ControleOrcamento.Contexto.Domain.Teste\Entidade\UsuarioAutenticacaoTeste.csutf-8{
-rD:\GIT\ControleOrcamentoWebApi\Contextos\Testes\ControleOrcamento.Contexto.Domain.Teste\ObjetosValor\EmailTeste.csutf-8€
-wD:\GIT\ControleOrcamentoWebApi\Contextos\Testes\ControleOrcamento.Contexto.Domain.Teste\ObjetosValor\NomePessoaTeste.csutf-8‚
-yD:\GIT\ControleOrcamentoWebApi\Contextos\Testes\ControleOrcamento.Contexto.Domain.Teste\ObjetosValor\SenhaSecretaTeste.csutf-8
+x
+oD:\GIT\ControleOrcamentoWebApi\Contextos\ControleOrcamento.ContextoUsuario.Domain\Entidades\UsuarioConvidado.csutf-8u
+lD:\GIT\ControleOrcamentoWebApi\Contextos\ControleOrcamento.ContextoUsuario.Domain\Entidades\UsuarioMaster.csutf-8

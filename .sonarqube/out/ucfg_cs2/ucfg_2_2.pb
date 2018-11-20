@@ -1,5 +1,5 @@
 
-PControleOrcamento.ContextoUsuario.Domain.Entidades.UsuarioMaster.UsuarioMaster()v
-lD:\GIT\ControleOrcamentoWebApi\Contextos\ControleOrcamento.ContextoUsuario.Domain\Entidades\UsuarioMaster.cs (	"0*
+AControleOrcamento.ContextoBancario.Domain.Entidades.Banco.Banco()o
+eD:\GIT\ControleOrcamentoWebApi\Contextos\ControleOrcamento.ContextoBancario.Domain\Entidades\Banco.cs/ 3(	"0*
 0"
 ""

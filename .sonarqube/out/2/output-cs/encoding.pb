@@ -1,3 +1,4 @@
-x
-oD:\GIT\ControleOrcamentoWebApi\Contextos\ControleOrcamento.ContextoUsuario.Domain\Entidades\UsuarioConvidado.csutf-8u
-lD:\GIT\ControleOrcamentoWebApi\Contextos\ControleOrcamento.ContextoUsuario.Domain\Entidades\UsuarioMaster.csutf-8
+p
+gD:\GIT\ControleOrcamentoWebApi\Contextos\ControleOrcamento.ContextoBancario.Domain\Entidades\Agencia.csutf-8n
+eD:\GIT\ControleOrcamentoWebApi\Contextos\ControleOrcamento.ContextoBancario.Domain\Entidades\Banco.csutf-8v
+mD:\GIT\ControleOrcamentoWebApi\Contextos\ControleOrcamento.ContextoBancario.Domain\Entidades\ContaCorrente.csutf-8
