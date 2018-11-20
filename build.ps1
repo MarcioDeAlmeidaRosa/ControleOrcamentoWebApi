@@ -39,11 +39,6 @@ msbuild /t:Restore,Pack .\Contextos\Testes\ControleOrcamento.ContextoUsuario.Dom
 if (-Not $LastExitCode -eq 0)
 	{ exit $LastExitCode }
 
-Write-Output "msbuild Restore -> ControleOrcamento.Contexto"
-msbuild /t:Restore,Pack .\Contextos\ControleOrcamento.Contexto\ /p:targetFrameworks='"netcoreapp2.1"' /p:VersionPrefix=$versionPrefix /p:VersionSuffix=$versionSuffix /p:FileVersion=$versionFile /p:ProductVersion=$versionProduct /p:Configuration=Release /p:IncludeSymbols=true /p:PackageOutputPath=..\..\artifacts /verbosity:minimal
-if (-Not $LastExitCode -eq 0)
-	{ exit $LastExitCode }
-
 Write-Output "msbuild Restore -> ControleOrcamento.Contexto.Domain"
 msbuild /t:Restore,Pack .\Contextos\ControleOrcamento.Contexto.Domain\ /p:targetFrameworks='"netcoreapp2.1"' /p:VersionPrefix=$versionPrefix /p:VersionSuffix=$versionSuffix /p:FileVersion=$versionFile /p:ProductVersion=$versionProduct /p:Configuration=Release /p:IncludeSymbols=true /p:PackageOutputPath=..\..\artifacts /verbosity:minimal
 if (-Not $LastExitCode -eq 0)
