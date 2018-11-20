@@ -3,5 +3,5 @@ projectKey=MarcioDeAlmeidaRosa_ControleOrcamentoWebApi
 serverUrl=https://sonarcloud.io
 serverVersion=7.5.0.19140
 dashboardUrl=https://sonarcloud.io/dashboard?id=MarcioDeAlmeidaRosa_ControleOrcamentoWebApi
-ceTaskId=AWcuOpjvzo_2DVXDjUFO
-ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AWcuOpjvzo_2DVXDjUFO
+ceTaskId=AWcucth_ZBOcJ_K_v5f9
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AWcucth_ZBOcJ_K_v5f9
