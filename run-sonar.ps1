@@ -48,7 +48,7 @@ if ($env:APPVEYOR_REPO_NAME -eq $github) {
         SonarScanner.MSBuild.exe begin /k:"$sonarQubeId" /d:"sonar.host.url=$sonarUrl" /d:"sonar.login=$sonarToken" /v:"$buildVersion"
     }
 
-    msbuild /t:Rebuild $projectFile /p:targetFrameworks=$framework /verbosity:minimal
+    #msbuild /t:Rebuild $projectFile /p:targetFrameworks=$framework /verbosity:minimal
 
     SonarScanner.MSBuild.exe end /d:"sonar.login=$env:sonar_token"
 }
