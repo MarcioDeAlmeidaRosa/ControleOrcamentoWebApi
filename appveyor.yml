@@ -26,9 +26,9 @@ build_script:
 #  - pip install codecov
 #  - codecov -f "coverage.xml"
 
-cache:
-  - src\packages -> **\packages.config
-  - c:\projects\ControleOrcamentoWebApi\appveyor.sonar\cache
+#cache:
+#  - src\packages -> **\packages.config
+#  - c:\projects\ControleOrcamentoWebApi\appveyor.sonar\cache
 
 #services:
 #  - mssql2016
