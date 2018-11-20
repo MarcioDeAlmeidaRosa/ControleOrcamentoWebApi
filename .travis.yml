@@ -31,6 +31,8 @@ install:
 script:
   # Run tests
   - dotnet test Contextos/Testes/ControleOrcamento.Contexto.Domain.Teste --configuration Release --framework netcoreapp2.1
+  - dotnet test Contextos/Testes/ControleOrcamento.ContextoBancario.Domain.Teste --configuration Release --framework netcoreapp2.1
+  - dotnet test Contextos/Testes/ControleOrcamento.ContextoUsuario.Domain.Teste --configuration Release --framework netcoreapp2.1
 
   #- dotnet msbuild /t:Restore /p:targetframework=net452 /p:monobuild=1 src/NLog
   #- dotnet msbuild /t:Restore /p:targetframework=net452 /p:monobuild=1 tests/NLog.UnitTests
