@@ -44,14 +44,14 @@ msbuild /t:Restore,Pack .\Contextos\ControleOrcamento.Contexto.Domain\ /p:target
 if (-Not $LastExitCode -eq 0)
 	{ exit $LastExitCode }
 
-# Write-Output "###### -> msbuild Restore -> ControleOrcamento.ContextoBancario.Domain"
-# msbuild /t:Restore,Pack .\Contextos\ControleOrcamento.ContextoBancario.Domain\ /p:targetFrameworks='"netcoreapp2.1"' /p:VersionPrefix=$versionPrefix /p:VersionSuffix=$versionSuffix /p:FileVersion=$versionFile /p:ProductVersion=$versionProduct /p:Configuration=Release /p:IncludeSymbols=true /p:PackageOutputPath=..\..\artifacts /verbosity:minimal
-# if (-Not $LastExitCode -eq 0)
-	# { exit $LastExitCode }
+Write-Output "###### -> msbuild Restore -> ControleOrcamento.ContextoBancario.Domain"
+msbuild /t:Restore,Pack .\Contextos\ControleOrcamento.ContextoBancario.Domain\ /p:targetFrameworks='"netcoreapp2.1"' /p:VersionPrefix=$versionPrefix /p:VersionSuffix=$versionSuffix /p:FileVersion=$versionFile /p:ProductVersion=$versionProduct /p:Configuration=Release /p:IncludeSymbols=true /p:PackageOutputPath=..\..\artifacts /verbosity:minimal
+ if (-Not $LastExitCode -eq 0)
+	{ exit $LastExitCode }
 
-# Write-Output "###### -> msbuild Restore -> ControleOrcamento.ContextoUsuario.Domain"
-# msbuild /t:Restore,Pack .\Contextos\ControleOrcamento.ContextoUsuario.Domain\ /p:targetFrameworks='"netcoreapp2.1"' /p:VersionPrefix=$versionPrefix /p:VersionSuffix=$versionSuffix /p:FileVersion=$versionFile /p:ProductVersion=$versionProduct /p:Configuration=Release /p:IncludeSymbols=true /p:PackageOutputPath=..\..\artifacts /verbosity:minimal
-# if (-Not $LastExitCode -eq 0)
-	# { exit $LastExitCode }	
+Write-Output "###### -> msbuild Restore -> ControleOrcamento.ContextoUsuario.Domain"
+msbuild /t:Restore,Pack .\Contextos\ControleOrcamento.ContextoUsuario.Domain\ /p:targetFrameworks='"netcoreapp2.1"' /p:VersionPrefix=$versionPrefix /p:VersionSuffix=$versionSuffix /p:FileVersion=$versionFile /p:ProductVersion=$versionProduct /p:Configuration=Release /p:IncludeSymbols=true /p:PackageOutputPath=..\..\artifacts /verbosity:minimal
+if (-Not $LastExitCode -eq 0)
+	{ exit $LastExitCode }	
 
 exit $LastExitCode
