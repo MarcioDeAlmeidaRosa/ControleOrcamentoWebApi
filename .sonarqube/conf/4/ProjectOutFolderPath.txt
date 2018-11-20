@@ -1,1 +1,0 @@
-D:\GIT\ControleOrcamentoWebApi\.sonarqube\out\4
