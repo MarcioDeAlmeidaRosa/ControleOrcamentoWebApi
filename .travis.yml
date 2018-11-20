@@ -1,9 +1,12 @@
 language: csharp
 sudo: false
+install: true
 addons:
   sonarcloud:
     organization: "marciodealmeidarosa-github"
     token:
       secure: "d4e156ba1c863fbddcb01c4be8c38c4429ea1f67"
 script:
-  - sonar-scanner
+  - dotnet sonarscanner begin /k:"MarcioDeAlmeidaRosa_ControleOrcamentoWebApi" /d:sonar.organization="marciodealmeidarosa-github" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.login="d4e156ba1c863fbddcb01c4be8c38c4429ea1f67"
+  - dotnet build
+  - dotnet sonarscanner end /d:sonar.login="d4e156ba1c863fbddcb01c4be8c38c4429ea1f67"
