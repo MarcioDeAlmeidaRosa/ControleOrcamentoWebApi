@@ -13,7 +13,7 @@ install:
 
 skip_tags: true
 build_script:
-  #- ps: .\build.ps1
+  - ps: .\build.ps1
   - ps: .\run-sonar.ps1
 
 #test_script:

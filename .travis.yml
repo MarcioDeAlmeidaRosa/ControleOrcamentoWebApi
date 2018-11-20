@@ -30,12 +30,10 @@ install:
 
 script:
   # Run tests
-echo "Run tests"
   - dotnet test Contextos/Testes/ControleOrcamento.Contexto.Domain.Teste --configuration Release --framework netcoreapp2.1
   - dotnet test Contextos/Testes/ControleOrcamento.ContextoBancario.Domain.Teste --configuration Release --framework netcoreapp2.1
   - dotnet test Contextos/Testes/ControleOrcamento.ContextoUsuario.Domain.Teste --configuration Release --framework netcoreapp2.1
-  
-echo "dotnet msbuild"
+
   - dotnet msbuild /t:Restore /p:targetframework=netcoreapp2.1 /p:monobuild=1 Contextos/ControleOrcamento.Contexto
   - dotnet msbuild /t:Restore /p:targetframework=netcoreapp2.1 /p:monobuild=1 Contextos/ControleOrcamento.Contexto.Domain
   - dotnet msbuild /t:Restore /p:targetframework=netcoreapp2.1 /p:monobuild=1 Contextos/ControleOrcamento.ContextoBancario.Domain
