@@ -3,7 +3,7 @@ $sonarQubeId = "MarcioDeAlmeidaRosa_ControleOrcamentoWebApi"
 $sonarOrganization = "marciodealmeidarosa-github"
 $github = "MarcioDeAlmeidaRosa/ControleOrcamentoWebApi"
 $baseBranch = "master"
-$framework = "net45" #todo
+$framework = "2.1" #todo
 $sonar_token = "d1acfe8a3a3dbb679f3e36cf2c45b80cc06f2fc1"
 
 if ($env:APPVEYOR_REPO_NAME -eq $github) {
@@ -50,9 +50,10 @@ if ($env:APPVEYOR_REPO_NAME -eq $github) {
         SonarScanner.MSBuild.exe begin /k:"$sonarQubeId" /d:"sonar.organization=$sonarOrganization" /d:"sonar.host.url=$sonarUrl" /d:"sonar.login=$sonarToken" /v:"$buildVersion"
     }
 
-    msbuild /t:Rebuild $projectFile #/p:targetFrameworks=$framework /verbosity:minimal
+    Write-Output "Sonar: Running msbuild"
+    msbuild /t:Rebuild $projectFile /p:targetFrameworks=$framework #/verbosity:minimal
 
-
+    Write-Output "Sonar: Running end"
     SonarScanner.MSBuild.exe end /d:"sonar.login=$sonarToken"
 }
 else {
