@@ -33,9 +33,3 @@ script:
   - dotnet test Contextos/Testes/ControleOrcamento.Contexto.Domain.Teste --configuration Release --framework netcoreapp2.1
   - dotnet test Contextos/Testes/ControleOrcamento.ContextoBancario.Domain.Teste --configuration Release --framework netcoreapp2.1
   - dotnet test Contextos/Testes/ControleOrcamento.ContextoUsuario.Domain.Teste --configuration Release --framework netcoreapp2.1
-  
-  - SonarScanner.MSBuild.exe /k:"MarcioDeAlmeidaRosa_ControleOrcamentoWebApi" /d:sonar.organization="marciodealmeidarosa-github" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.login="d4e156ba1c863fbddcb01c4be8c38c4429ea1f67"
-  #- dotnet msbuild /t:Restore /p:targetframework=net452 /p:monobuild=1 src/NLog
-  #- dotnet msbuild /t:Restore /p:targetframework=net452 /p:monobuild=1 tests/NLog.UnitTests
-  #- dotnet msbuild /t:Rebuild /p:targetframework=net452 /p:configuration=Release /p:monobuild=1 tests/NLog.UnitTests
-  #- mono ./xunit.runner.console.2.2.0/tools/xunit.console.exe "./tests/NLog.UnitTests/bin/Release/net452/NLog.UnitTests.dll"
