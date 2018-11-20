@@ -3,7 +3,7 @@ $sonarQubeId = "MarcioDeAlmeidaRosa_ControleOrcamentoWebApi"
 $sonarOrganization = "marciodealmeidarosa-github"
 $github = "MarcioDeAlmeidaRosa/ControleOrcamentoWebApi"
 $baseBranch = "master"
-$framework = "2.1" #todo
+$framework = "netcoreapp2.1" #todo
 $sonar_token = "d1acfe8a3a3dbb679f3e36cf2c45b80cc06f2fc1"
 
 if ($env:APPVEYOR_REPO_NAME -eq $github) {
