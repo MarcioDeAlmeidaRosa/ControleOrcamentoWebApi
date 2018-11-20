@@ -7,7 +7,7 @@ $sonar_token: "d1acfe8a3a3dbb679f3e36cf2c45b80cc06f2fc1"
 
 if ($env:APPVEYOR_REPO_NAME -eq $github) {
 
-    if (-not $env:sonar_token) {
+    if (-not $sonar_token) {
         Write-warning "Sonar: not running SonarQube, no sonar_token"
         return;
     }
@@ -31,7 +31,7 @@ if ($env:APPVEYOR_REPO_NAME -eq $github) {
     choco install "msbuild-sonarqube-runner" -y
 
     $sonarUrl = "https://sonarcloud.io"
-    $sonarToken = $env:sonar_token
+    $sonarToken = $sonar_token
     $buildVersion = $env:APPVEYOR_BUILD_VERSION
 
     if ($prMode) {
@@ -51,7 +51,7 @@ if ($env:APPVEYOR_REPO_NAME -eq $github) {
 
     #msbuild /t:Rebuild $projectFile /p:targetFrameworks=$framework /verbosity:minimal
 
-    SonarScanner.MSBuild.exe end /d:"sonar.login=$env:sonar_token"
+    SonarScanner.MSBuild.exe end /d:"sonar.login=$sonar_token"
 }
 else {
     Write-Output "Sonar: not running as we're on '$env:APPVEYOR_REPO_NAME'"
