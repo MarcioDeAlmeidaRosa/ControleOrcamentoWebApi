@@ -14,6 +14,16 @@ namespace ControleOrcamento.Contexto.Domain.Entidade.Contratos.Usuario
         public NomePessoa Nome { get; private set; }
 
         /// <summary>
+        /// Quando verdadeiro, indica que o usuário esta bloqueado para acesso a aplicação
+        /// </summary>
+        public bool Bloqueado { get; set; }
+
+        /// <summary>
+        /// Quando verdadeiro, indica que o usuário já efetuou a verificação do login e esta apto para usar a aplicação
+        /// </summary>
+        public bool Verificado { get; set; }
+
+        /// <summary>
         /// Cria um usuário candidato garantindo seu estado válido
         /// </summary>
         /// <param name="email">E-mail do usuário da aplicação</param>

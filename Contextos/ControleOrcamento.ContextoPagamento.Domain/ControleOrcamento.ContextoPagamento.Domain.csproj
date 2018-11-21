@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>D:\GIT\ControleOrcamentoWebApi\Contextos\ControleOrcamento.ContextoPagamento.Domain\ControleOrcamento.ContextoPagamento.Domain.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Comandos\" />
+    <Folder Include="Entidades\" />
+    <Folder Include="Enums\" />
+    <Folder Include="Manipuladores\" />
+    <Folder Include="Servicos\" />
+    <Folder Include="Repositorios\" />
+    <Folder Include="Pesquisas\" />
+  </ItemGroup>
+
+</Project>
