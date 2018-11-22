@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <AssemblyName>ControleOrcamento.ContextoQuitacao.Domain</AssemblyName>
+    <RootNamespace>ControleOrcamento.ContextoQuitacao.Domain</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>D:\GIT\ControleOrcamentoWebApi\Contextos\ControleOrcamento.ContextoPagamento.Domain\ControleOrcamento.ContextoQuitacao.Domain.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Comandos\" />
+    <Folder Include="Manipuladores\" />
+    <Folder Include="Servicos\" />
+    <Folder Include="Repositorios\" />
+    <Folder Include="Pesquisas\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ControleOrcamento.Contexto.Domain\ControleOrcamento.Contexto.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

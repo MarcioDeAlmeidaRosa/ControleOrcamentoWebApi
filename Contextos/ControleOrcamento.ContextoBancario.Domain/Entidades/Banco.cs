@@ -1,4 +1,5 @@
 ﻿using System;
+using ControleOrcamento.Contexto.Domain.Entidade;
 using ControleOrcamento.Contexto.Domain.Entidade.Contratos.Usuario;
 
 namespace ControleOrcamento.ContextoBancario.Domain.Entidades
@@ -6,7 +7,7 @@ namespace ControleOrcamento.ContextoBancario.Domain.Entidades
     /// <summary>
     /// Representa um banco no mundo real
     /// </summary>
-    public sealed class Banco
+    public sealed class Banco : EntidadeBase
     {
         /// <summary>
         /// Representa o usuário do registro

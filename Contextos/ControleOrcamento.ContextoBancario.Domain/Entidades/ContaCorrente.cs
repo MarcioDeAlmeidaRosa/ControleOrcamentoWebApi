@@ -1,4 +1,5 @@
 ﻿using System;
+using ControleOrcamento.Contexto.Domain.Entidade;
 using ControleOrcamento.ContextoBancario.Domain.Enums;
 using ControleOrcamento.Contexto.Domain.Entidade.Contratos.Usuario;
 
@@ -7,7 +8,7 @@ namespace ControleOrcamento.ContextoBancario.Domain.Entidades
     /// <summary>
     /// Representa uma conta corrente no mundo real
     /// </summary>
-    public sealed class ContaCorrente
+    public sealed class ContaCorrente : EntidadeBase
     {
         /// <summary>
         /// Representa o usuário do registro
