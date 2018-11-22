@@ -22,11 +22,13 @@ install:
   # Restore dependencies
   - dotnet restore Contextos/ControleOrcamento.Contexto.Domain
   - dotnet restore Contextos/ControleOrcamento.ContextoBancario.Domain
+  - dotnet restore Contextos/ControleOrcamento.ContextoClassificacao.Domain
   - dotnet restore Contextos/ControleOrcamento.ContextoQuitacao.Domain
   - dotnet restore Contextos/ControleOrcamento.ContextoUsuario.Domain
 
   - dotnet restore Contextos/Testes/ControleOrcamento.Contexto.Domain.Teste
   - dotnet restore Contextos/Testes/ControleOrcamento.ContextoBancario.Domain.Teste
+  - dotnet restore Contextos/Testes/ControleOrcamento.ContextoClassificacao.Domain.Teste
   - dotnet restore Contextos/Testes/ControleOrcamento.ContextoQuitacao.Domain.Teste
   - dotnet restore Contextos/Testes/ControleOrcamento.ContextoUsuario.Domain.Teste
 
@@ -34,10 +36,12 @@ script:
   # Run tests
   - dotnet test Contextos/Testes/ControleOrcamento.Contexto.Domain.Teste --configuration Release --framework netcoreapp2.1
   - dotnet test Contextos/Testes/ControleOrcamento.ContextoBancario.Domain.Teste --configuration Release --framework netcoreapp2.1
+  - dotnet test Contextos/Testes/ControleOrcamento.ContextoClassificacao.Domain.Teste --configuration Release --framework netcoreapp2.1
   - dotnet test Contextos/Testes/ControleOrcamento.ContextoQuitacao.Domain.Teste --configuration Release --framework netcoreapp2.1
   - dotnet test Contextos/Testes/ControleOrcamento.ContextoUsuario.Domain.Teste --configuration Release --framework netcoreapp2.1
   # Restore dos projetos
   - dotnet msbuild /t:Restore /p:targetframework=netcoreapp2.1 /p:monobuild=1 Contextos/ControleOrcamento.Contexto.Domain
   - dotnet msbuild /t:Restore /p:targetframework=netcoreapp2.1 /p:monobuild=1 Contextos/ControleOrcamento.ContextoBancario.Domain
+  - dotnet msbuild /t:Restore /p:targetframework=netcoreapp2.1 /p:monobuild=1 Contextos/ControleOrcamento.ContextoClassificacao.Domain
   - dotnet msbuild /t:Restore /p:targetframework=netcoreapp2.1 /p:monobuild=1 Contextos/ControleOrcamento.ContextoQuitacao.Domain
   - dotnet msbuild /t:Restore /p:targetframework=netcoreapp2.1 /p:monobuild=1 Contextos/ControleOrcamento.ContextoUsuario.Domain
