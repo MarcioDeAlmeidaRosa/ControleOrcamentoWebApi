@@ -46,6 +46,6 @@ script:
   - dotnet msbuild /t:Restore /p:targetframework=netcoreapp2.1 /p:monobuild=1 Contextos/ControleOrcamento.Contexto.Domain
   - dotnet msbuild /t:Restore /p:targetframework=netcoreapp2.1 /p:monobuild=1 Contextos/ControleOrcamento.ContextoBancario.Domain
   - dotnet msbuild /t:Restore /p:targetframework=netcoreapp2.1 /p:monobuild=1 Contextos/ControleOrcamento.ContextoClassificacao.Domain
-  - dotnet msbuild /t:Restore /p:targetframework=netcoreapp2.1 /p:monobuild=1 Contextos/ControleOrcamento.ContextoLancamento.Domain.Domain
+  - dotnet msbuild /t:Restore /p:targetframework=netcoreapp2.1 /p:monobuild=1 Contextos/ControleOrcamento.ContextoLancamento.Domain
   - dotnet msbuild /t:Restore /p:targetframework=netcoreapp2.1 /p:monobuild=1 Contextos/ControleOrcamento.ContextoQuitacao.Domain
   - dotnet msbuild /t:Restore /p:targetframework=netcoreapp2.1 /p:monobuild=1 Contextos/ControleOrcamento.ContextoUsuario.Domain
