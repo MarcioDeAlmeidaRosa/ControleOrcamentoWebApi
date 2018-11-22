@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>D:\GIT\ControleOrcamentoWebApi\Contextos\ControleOrcamento.ContextoLancamento.Domain\ControleOrcamento.ContextoLancamento.Domain.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Comandos\" />
+    <Folder Include="Enums\" />
+    <Folder Include="Manipuladores\" />
+    <Folder Include="Pesquisas\" />
+    <Folder Include="Repositorios\" />
+    <Folder Include="Servicos\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ControleOrcamento.Contexto.Domain\ControleOrcamento.Contexto.Domain.csproj" />
+    <ProjectReference Include="..\ControleOrcamento.ContextoClassificacao.Domain\ControleOrcamento.ContextoClassificacao.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
