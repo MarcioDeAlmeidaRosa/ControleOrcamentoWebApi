@@ -7,3 +7,14 @@
 
 Projeto responsável pela parte backend do sistema de controle de orçamento.
 Este sistema tem a finalidade de te auxliar com o controle de orçamento e conseguir montar seu planejamento financeiro. Saiba um pouco mais sobre planejamento e orçamento financeiro no blog: https://blog.magnetis.com.br/planejamento-e-orcamento-financeiro.
+
+## Requerimentos técnicos mínimos:
+- netcoreapp2.1
+
+## Instalação
+
+**Windows**
+
+- Criar um novo site no IIS.
+- Enviar os arquivos de publicação para a pasta criada no IIS.
+- Continuar...
