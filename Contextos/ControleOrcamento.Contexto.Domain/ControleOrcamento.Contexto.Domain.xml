@@ -24,10 +24,11 @@
             Representa o hash usado para a criptografica da senha
             </summary>
         </member>
-        <member name="M:ControleOrcamento.Contexto.Domain.Entidade.Contratos.Usuario.UsuarioAutenticacao.#ctor(ControleOrcamento.Contexto.Domain.ObjetosValor.Email,ControleOrcamento.Contexto.Domain.ObjetosValor.NomePessoa,System.String,ControleOrcamento.Contexto.Domain.ObjetosValor.SenhaSecreta)">
+        <member name="M:ControleOrcamento.Contexto.Domain.Entidade.Contratos.Usuario.UsuarioAutenticacao.#ctor(ControleOrcamento.Contexto.Domain.Entidade.Contratos.Usuario.UsuarioBase,ControleOrcamento.Contexto.Domain.ObjetosValor.Email,ControleOrcamento.Contexto.Domain.ObjetosValor.NomePessoa,System.String,ControleOrcamento.Contexto.Domain.ObjetosValor.SenhaSecreta)">
             <summary>
             Cria usuário para efetuar login na aplicação
             </summary>
+            <param name="usuario">Usuário responsável pelo registro</param>
             <param name="email">E-mail do usuário da aplicação</param>
             <param name="nome">Nome do usuário da aplicação</param>
             <param name="login">Login do usuário para acessar a aplicação</param>
@@ -65,10 +66,11 @@
             Quando verdadeiro, indica que o usuário já efetuou a verificação do login e esta apto para usar a aplicação
             </summary>
         </member>
-        <member name="M:ControleOrcamento.Contexto.Domain.Entidade.Contratos.Usuario.UsuarioBase.#ctor(ControleOrcamento.Contexto.Domain.ObjetosValor.Email,ControleOrcamento.Contexto.Domain.ObjetosValor.NomePessoa)">
+        <member name="M:ControleOrcamento.Contexto.Domain.Entidade.Contratos.Usuario.UsuarioBase.#ctor(ControleOrcamento.Contexto.Domain.Entidade.Contratos.Usuario.UsuarioBase,ControleOrcamento.Contexto.Domain.ObjetosValor.Email,ControleOrcamento.Contexto.Domain.ObjetosValor.NomePessoa)">
             <summary>
             Cria um usuário candidato garantindo seu estado válido
             </summary>
+            <param name="usuario">Usuário responsável pelo registro</param>
             <param name="email">E-mail do usuário da aplicação</param>
             <param name="nome">Nome do usuário da aplicação</param>
             <exception cref="T:System.ArgumentNullException">Lançado quando não for informado <paramref name="email"/></exception>
@@ -91,10 +93,11 @@
             Representa o e-mail da conta do usuário da aplicaçãao
             </summary>
         </member>
-        <member name="M:ControleOrcamento.Contexto.Domain.Entidade.Contratos.Usuario.UsuarioCandidato.#ctor(ControleOrcamento.Contexto.Domain.ObjetosValor.Email)">
+        <member name="M:ControleOrcamento.Contexto.Domain.Entidade.Contratos.Usuario.UsuarioCandidato.#ctor(ControleOrcamento.Contexto.Domain.Entidade.Contratos.Usuario.UsuarioBase,ControleOrcamento.Contexto.Domain.ObjetosValor.Email)">
             <summary>
             Cria um usuário candidato garantindo seu estado válido
             </summary>
+            <param name="usuario">Usuário responsável pelo registro</param>
             <param name="email"></param>
             <exception cref="T:System.ArgumentNullException">Lançado quando não for informado <paramref name="email"/></exception>
             <exception cref="T:System.ArgumentException">Lançado quando o <paramref name="email"/> informado náo é válido</exception>

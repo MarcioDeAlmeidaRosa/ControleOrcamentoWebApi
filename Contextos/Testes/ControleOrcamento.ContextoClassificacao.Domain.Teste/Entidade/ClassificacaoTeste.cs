@@ -1,15 +1,31 @@
 ﻿using System;
+using ControleOrcamento.Mocks.Teste;
 using ControleOrcamento.Contexto.Domain.Enums;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ControleOrcamento.ContextoClassificacao.Domain.Enums;
 using ControleOrcamento.ContextoClassificacao.Domain.Entidades;
 using ControleOrcamento.ContextoClassificacao.Domain.ObjetosValor;
+using ControleOrcamento.Contexto.Domain.Entidade.Contratos.Usuario;
 
 namespace ControleOrcamento.ContextoClassificacao.Domain.Teste.Entidade
 {
     [TestClass]
     public class ClassificacaoTeste
     {
+        private UsuarioBase usuario { get; set; }
+
+        [TestInitialize]
+        public void Inicializar()
+        {
+            usuario = new ServicoUsuario().BuscarPorId(Guid.NewGuid());
+        }
+
+        [TestCleanup]
+        public void Encerrar()
+        {
+            usuario = null;
+        }
+
         [TestMethod]
         [DataTestMethod]
         [DataRow("Moradia", Categoria.Despesa)]
@@ -27,8 +43,8 @@ namespace ControleOrcamento.ContextoClassificacao.Domain.Teste.Entidade
         [DataRow("Salário", Categoria.Receita)]
         public void DeveCriarClassificacaoComSucesso(string descricao, Categoria classificacao)
         {
-            var usuario = new Classificacao(new NomeClassificacao(descricao), classificacao);
-            Assert.IsNotNull(usuario.Id);
+            var objeto = new Classificacao(usuario, new NomeClassificacao(descricao), classificacao);
+            Assert.IsNotNull(objeto.Id);
         }
 
         [TestMethod]
@@ -36,7 +52,7 @@ namespace ControleOrcamento.ContextoClassificacao.Domain.Teste.Entidade
         [ExpectedException(typeof(ArgumentNullException))]
         public void DeveFalharPorArgumentNullException()
         {
-            new Classificacao(null, Categoria.Receita);
+            new Classificacao(usuario, null, Categoria.Receita);
         }
 
         [TestMethod]
@@ -49,7 +65,7 @@ namespace ControleOrcamento.ContextoClassificacao.Domain.Teste.Entidade
         [ExpectedException(typeof(ArgumentException))]
         public void DeveFalharNaCriacaoDaClassificacao(string descricao)
         {
-            new Classificacao(new NomeClassificacao(descricao), Categoria.Receita);
+            new Classificacao(usuario, new NomeClassificacao(descricao), Categoria.Receita);
         }
 
         [TestMethod]
@@ -57,8 +73,8 @@ namespace ControleOrcamento.ContextoClassificacao.Domain.Teste.Entidade
         [DataRow("Moradia", Categoria.Despesa, "1", Frequencia.Anual)]
         public void DeveCriarClassificacaoFrequenciaComSucesso(string descricao, Categoria classificacao, string limiteEstipulado, Frequencia frequencia)
         {
-            var usuario = new Classificacao(new NomeClassificacao(descricao), classificacao, decimal.Parse(limiteEstipulado), frequencia);
-            Assert.IsNotNull(usuario.Id);
+            var objeto = new Classificacao(usuario, new NomeClassificacao(descricao), classificacao, decimal.Parse(limiteEstipulado), frequencia);
+            Assert.IsNotNull(objeto.Id);
         }
 
         [TestMethod]
@@ -67,7 +83,14 @@ namespace ControleOrcamento.ContextoClassificacao.Domain.Teste.Entidade
         [ExpectedException(typeof(ArgumentException))]
         public void DeveFalharNaCriacaoDaClassificacaoParametroFrequenciaErrado(string descricao, Categoria classificacao, string limiteEstipulado)
         {
-            new Classificacao(new NomeClassificacao(descricao), classificacao, decimal.Parse(limiteEstipulado), null);
+            new Classificacao(usuario, new NomeClassificacao(descricao), classificacao, decimal.Parse(limiteEstipulado), null);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentNullException))]
+        public void DeveFalharNaoInformadoUsuario()
+        {
+            new Classificacao(null, null, Categoria.Despesa, null, null);
         }
     }
 }

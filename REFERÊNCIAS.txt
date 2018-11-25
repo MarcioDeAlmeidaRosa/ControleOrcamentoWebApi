@@ -50,7 +50,14 @@ A Cleaner Way to Create Mocks in .NET
 https://medium.com/webcom-engineering-and-product/a-cleaner-way-to-create-mocks-in-net-6e039c3d1db0
 
 
+Create test data with NBuilder and Faker
+https://www.jerriepelser.com/blog/creating-test-data-with-nbuilder-and-faker/
+Documentação
+https://code.google.com/archive/p/nbuilder/wikis/Overview_HowTo.wiki
 
+
+Configurar inicialização do teste
+https://stackoverflow.com/questions/14461737/visual-studio-unit-testing-setup-and-teardown
 
 
 
@@ -119,3 +126,8 @@ dotnet sonarscanner begin /k:"MarcioDeAlmeidaRosa_ControleOrcamentoWebApi"
 dotnet build
 dotnet sonarscanner end
 -------------------------------------------------------------------------------------------------------------
+
+C:\REPOS\GITHUB\ControleOrcamentoWebApi\ControleOrcamentoWebApi.sln.metaproj : error MSB4126: The specified solution con
+figuration "Debug|MCD" is invalid. Please specify a valid solution configuration using the Configuration and Platform pr
+operties (e.g. MSBuild.exe Solution.sln /p:Configuration=Debug /p:Platform="Any CPU") or leave those properties blank to
+ use the default solution configuration. [C:\REPOS\GITHUB\ControleOrcamentoWebApi\ControleOrcamentoWebApi.sln]

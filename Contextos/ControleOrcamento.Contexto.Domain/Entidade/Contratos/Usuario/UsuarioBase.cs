@@ -26,15 +26,16 @@ namespace ControleOrcamento.Contexto.Domain.Entidade.Contratos.Usuario
         /// <summary>
         /// Cria um usuário candidato garantindo seu estado válido
         /// </summary>
+        /// <param name="usuario">Usuário responsável pelo registro</param>
         /// <param name="email">E-mail do usuário da aplicação</param>
         /// <param name="nome">Nome do usuário da aplicação</param>
         /// <exception cref="ArgumentNullException">Lançado quando não for informado <paramref name="email"/></exception>
         /// <exception cref="ArgumentException">Lançado quando o <paramref name="email"/> informado náo é válido</exception>
         /// <exception cref="ArgumentNullException">Lançado quando não for informado <paramref name="nome"/></exception>
         /// <exception cref="ArgumentException">Lançado quando o <paramref name="nome"/> informado náo é válido</exception>
-        protected UsuarioBase(Email email, NomePessoa nome) : base(email)
+        protected UsuarioBase(UsuarioBase usuario, Email email, NomePessoa nome) : base(usuario, email)
         {
-            nome = nome ?? throw new ArgumentNullException(nameof(nome), "Nome do usuário não informado");
+            Nome = nome ?? throw new ArgumentNullException(nameof(nome), "Nome do usuário não informado");
             if (nome.Invalid)
             {
                 throw new ArgumentException(nome.Notifications.ToString(), nameof(nome));

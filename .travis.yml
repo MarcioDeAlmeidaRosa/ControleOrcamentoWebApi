@@ -27,6 +27,7 @@ install:
   - dotnet restore Contextos/ControleOrcamento.ContextoQuitacao.Domain
   - dotnet restore Contextos/ControleOrcamento.ContextoUsuario.Domain
 
+  - dotnet restore Contextos/Testes/ControleOrcamento.Mocks.Teste
   - dotnet restore Contextos/Testes/ControleOrcamento.Contexto.Domain.Teste
   - dotnet restore Contextos/Testes/ControleOrcamento.ContextoBancario.Domain.Teste
   - dotnet restore Contextos/Testes/ControleOrcamento.ContextoClassificacao.Domain.Teste
@@ -36,6 +37,7 @@ install:
 
 script:
   # Run tests
+  - dotnet test Contextos/Testes/ControleOrcamento.Mocks.Teste --configuration Release --framework netcoreapp2.1
   - dotnet test Contextos/Testes/ControleOrcamento.Contexto.Domain.Teste --configuration Release --framework netcoreapp2.1
   - dotnet test Contextos/Testes/ControleOrcamento.ContextoBancario.Domain.Teste --configuration Release --framework netcoreapp2.1
   - dotnet test Contextos/Testes/ControleOrcamento.ContextoClassificacao.Domain.Teste --configuration Release --framework netcoreapp2.1

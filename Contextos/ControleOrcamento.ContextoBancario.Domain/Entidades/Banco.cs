@@ -10,11 +10,6 @@ namespace ControleOrcamento.ContextoBancario.Domain.Entidades
     public sealed class Banco : EntidadeBase
     {
         /// <summary>
-        /// Representa o usuário do registro
-        /// </summary>
-        public UsuarioBase Usuario { get; private set; }
-
-        /// <summary>
         /// Representa o número do banco no mundo real
         /// </summary>
         public string Numero { get; private set; }
@@ -27,7 +22,7 @@ namespace ControleOrcamento.ContextoBancario.Domain.Entidades
         /// <summary>
         /// Cria novo banco garantindo seu estado válido
         /// </summary>
-        /// <param name="usuario">Usuário responsável pelo banco</param>
+        /// <param name="usuario">Usuário responsável pelo registro</param>
         /// <param name="numero">Número do banco</param>
         /// <param name="nome">Nome do banco</param>
         /// <exception cref="ArgumentNullException">Lançado quando não for informado qualquer das propriedades:
@@ -37,7 +32,7 @@ namespace ControleOrcamento.ContextoBancario.Domain.Entidades
         /// </exception>
         public Banco(UsuarioBase usuario, string numero, string nome)
         {
-            Usuario = usuario ?? throw new ArgumentNullException(nameof(usuario), "Não informado usuário do banco");
+            UsuarioCriacao = usuario ?? throw new ArgumentNullException(nameof(usuario), "Não informado usuário do registro");
             Numero = numero ?? throw new ArgumentNullException(nameof(numero), "Não informado número do banco");
             Nome = nome ?? throw new ArgumentNullException(nameof(nome), "Não informado nome do banco");
         }

@@ -11,11 +11,6 @@ namespace ControleOrcamento.ContextoBancario.Domain.Entidades
     public sealed class ContaCorrente : EntidadeBase
     {
         /// <summary>
-        /// Representa o usuário do registro
-        /// </summary>
-        public UsuarioBase Usuario { get; private set; }
-
-        /// <summary>
         /// Representa a agência bancária da conta corrente no mundo real
         /// </summary>
         public Agencia Agencia { get; private set; }
@@ -58,7 +53,7 @@ namespace ControleOrcamento.ContextoBancario.Domain.Entidades
         /// <summary>
         /// Cria nova conta corrente garantindo seu estado válido
         /// </summary>
-        /// <param name="usuario">Usuário responsável pela conta corrente</param>
+        /// <param name="usuario">Usuário responsável pelo registro</param>
         /// <param name="agencia">Agência da conta corrente</param>
         /// <param name="numero">Número da conta corrente</param>
         /// <param name="dv">DV da conta corrente</param>
@@ -76,7 +71,7 @@ namespace ControleOrcamento.ContextoBancario.Domain.Entidades
         /// </exception>
         public ContaCorrente(UsuarioBase usuario, Agencia agencia, string numero, string dv, TipoContaCorrente? tipo, decimal? saldo, decimal? limite)
         {
-            Usuario = usuario ?? throw new ArgumentNullException(nameof(usuario), "Não informado usuário da conta corrente");
+            UsuarioCriacao = usuario ?? throw new ArgumentNullException(nameof(usuario), "Não informado usuário do registro");
             Agencia = agencia ?? throw new ArgumentNullException(nameof(agencia), "Não informada agência da conta corrente");
             Numero = numero ?? throw new ArgumentNullException(nameof(numero), "Não informado número da conta corrente");
             DV = dv ?? throw new ArgumentNullException(nameof(dv), "Não informado o DV da conta corrente");

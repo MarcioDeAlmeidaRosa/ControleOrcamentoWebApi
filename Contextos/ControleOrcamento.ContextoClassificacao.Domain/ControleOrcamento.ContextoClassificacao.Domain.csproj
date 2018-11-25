@@ -13,7 +13,6 @@
     <Folder Include="Manipuladores\" />
     <Folder Include="Pesquisas\" />
     <Folder Include="Repositorios\" />
-    <Folder Include="Servicos\" />
   </ItemGroup>
 
   <ItemGroup>

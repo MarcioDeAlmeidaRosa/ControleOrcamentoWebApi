@@ -26,6 +26,7 @@ namespace ControleOrcamento.Contexto.Domain.Entidade.Contratos.Usuario
         /// <summary>
         /// Cria usuário para efetuar login na aplicação
         /// </summary>
+        /// <param name="usuario">Usuário responsável pelo registro</param>
         /// <param name="email">E-mail do usuário da aplicação</param>
         /// <param name="nome">Nome do usuário da aplicação</param>
         /// <param name="login">Login do usuário para acessar a aplicação</param>
@@ -37,7 +38,7 @@ namespace ControleOrcamento.Contexto.Domain.Entidade.Contratos.Usuario
         /// <exception cref="ArgumentNullException">Lançado quando não for informado <paramref name="login"/></exception>
         /// <exception cref="ArgumentNullException">Lançado quando não for informada <paramref name="senha"/></exception>
         /// <exception cref="ArgumentException">Lançado quando a <paramref name="senha"/> informada náo é válida</exception>
-        public UsuarioAutenticacao(Email email, NomePessoa nome, string login, SenhaSecreta senha) : base(email, nome)
+        public UsuarioAutenticacao(UsuarioBase usuario, Email email, NomePessoa nome, string login, SenhaSecreta senha) : base(usuario, email, nome)
         {
             Login = login ?? throw new ArgumentNullException(nameof(login), "Não informado login do usuário");
             Senha = senha ?? throw new ArgumentNullException(nameof(senha), "Não informada senha");

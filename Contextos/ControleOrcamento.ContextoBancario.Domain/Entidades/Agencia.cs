@@ -10,11 +10,6 @@ namespace ControleOrcamento.ContextoBancario.Domain.Entidades
     public sealed class Agencia : EntidadeBase
     {
         /// <summary>
-        /// Representa o usuário do registro
-        /// </summary>
-        public UsuarioBase Usuario { get; private set; }
-
-        /// <summary>
         /// Representa o banco da agência bancária no mundo real
         /// </summary>
         public Banco Banco { get; private set; }
@@ -32,7 +27,7 @@ namespace ControleOrcamento.ContextoBancario.Domain.Entidades
         /// <summary>
         /// Cria nova agência garantindo seu estado válido
         /// </summary>
-        /// <param name="usuario">Usuário responsável pela agência</param>
+        /// <param name="usuario">Usuário responsável pelo registro</param>
         /// <param name="banco">Banco da agência</param>
         /// <param name="numero">Número da agência</param>
         /// <param name="dv">DV da agência</param>
@@ -43,7 +38,7 @@ namespace ControleOrcamento.ContextoBancario.Domain.Entidades
         /// </exception>
         public Agencia(UsuarioBase usuario, Banco banco, string numero, string dv)
         {
-            Usuario = usuario ?? throw new ArgumentNullException(nameof(usuario), "Não informado usuário da agência");
+            UsuarioCriacao = usuario ?? throw new ArgumentNullException(nameof(usuario), "Não informado usuário do registro");
             Banco = banco ?? throw new ArgumentNullException(nameof(banco), "Não informado banco da agência");
             Numero = numero ?? throw new ArgumentNullException(nameof(numero), "Não informado número da agência");
             DV = dv;

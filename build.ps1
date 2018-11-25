@@ -24,6 +24,11 @@ $sourceNugetExe = "https://dist.nuget.org/win-x86-commandline/latest/nuget.exe"
 $targetNugetExe = "tools\nuget.exe"
 Invoke-WebRequest $sourceNugetExe -OutFile $targetNugetExe
 
+Write-Output "###### -> msbuild Restore -> ControleOrcamento.Mocks.Teste"
+msbuild /t:Restore,Pack .\Contextos\Testes\ControleOrcamento.Mocks.Teste\ /p:targetFrameworks='"netcoreapp2.1"' /p:VersionPrefix=$versionPrefix /p:VersionSuffix=$versionSuffix /p:FileVersion=$versionFile /p:ProductVersion=$versionProduct /p:Configuration=Release /p:IncludeSymbols=true /p:PackageOutputPath=..\..\artifacts /verbosity:minimal
+if (-Not $LastExitCode -eq 0)
+	{ exit $LastExitCode }
+	
 Write-Output "###### -> msbuild Restore -> ControleOrcamento.Contexto.Domain.Teste"
 msbuild /t:Restore,Pack .\Contextos\Testes\ControleOrcamento.Contexto.Domain.Teste\ /p:targetFrameworks='"netcoreapp2.1"' /p:VersionPrefix=$versionPrefix /p:VersionSuffix=$versionSuffix /p:FileVersion=$versionFile /p:ProductVersion=$versionProduct /p:Configuration=Release /p:IncludeSymbols=true /p:PackageOutputPath=..\..\artifacts /verbosity:minimal
 if (-Not $LastExitCode -eq 0)

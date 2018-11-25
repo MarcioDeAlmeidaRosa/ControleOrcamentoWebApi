@@ -29,10 +29,34 @@
             os custos para manter a casa
             </summary>
         </member>
+        <member name="M:ControleOrcamento.ContextoUsuario.Domain.Entidades.UsuarioMaster.#ctor(ControleOrcamento.Contexto.Domain.Entidade.Contratos.Usuario.UsuarioBase,ControleOrcamento.Contexto.Domain.ObjetosValor.Email,ControleOrcamento.Contexto.Domain.ObjetosValor.NomePessoa)">
+            <summary>
+            Cria um usuário candidato garantindo seu estado válido
+            </summary>
+            <param name="usuario">Usuário responsável pelo registro</param>
+            <param name="email"></param>
+            <param name="nome"></param>
+            <exception cref="T:System.ArgumentNullException">Lançado quando não for informado <paramref name="email"/></exception>
+            <exception cref="T:System.ArgumentException">Lançado quando o <paramref name="email"/> informado náo é válido</exception>
+            <exception cref="T:System.ArgumentNullException">Lançado quando não for informado <paramref name="nome"/></exception>
+            <exception cref="T:System.ArgumentException">Lançado quando o <paramref name="nome"/> informado náo é válido</exception>
+        </member>
         <member name="M:ControleOrcamento.ContextoUsuario.Domain.Entidades.UsuarioMaster.#ctor">
             <summary>
             Construtor necessário para o ORM
             </summary>
+        </member>
+        <member name="T:ControleOrcamento.ContextoUsuario.Domain.Servicos.IServicoUsuario">
+            <summary>
+            Responsável por determinar os serviços de usuário
+            </summary>
+        </member>
+        <member name="M:ControleOrcamento.ContextoUsuario.Domain.Servicos.IServicoUsuario.BuscarPorId(System.Guid)">
+            <summary>
+            Reponsável por buscar dados do usuário pelo seu ID
+            </summary>
+            <param name="guid">Id do usuário para pesquisa</param>
+            <returns>Retornado o usuário encontrado</returns>
         </member>
     </members>
 </doc>
