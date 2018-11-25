@@ -41,9 +41,9 @@ namespace ControleOrcamento.ContextoClassificacao.Domain.Teste.Entidade
         [DataRow("Presentes e doações", Categoria.Despesa)]
         [DataRow("Poupança/Investimentos", Categoria.Receita)]
         [DataRow("Salário", Categoria.Receita)]
-        public void DeveCriarClassificacaoComSucesso(string descricao, Categoria classificacao)
+        public void DeveCriarClassificacaoComSucesso(string nome, Categoria categoria)
         {
-            var objeto = new Classificacao(usuario, new NomeClassificacao(descricao), classificacao);
+            var objeto = new Classificacao(usuario, new NomeClassificacaoPadrao(nome), categoria);
             Assert.IsNotNull(objeto.Id);
         }
 
@@ -63,17 +63,17 @@ namespace ControleOrcamento.ContextoClassificacao.Domain.Teste.Entidade
         [DataRow("Pou")]
         [DataRow("Poup")]
         [ExpectedException(typeof(ArgumentException))]
-        public void DeveFalharNaCriacaoDaClassificacao(string descricao)
+        public void DeveFalharNaCriacaoDaClassificacao(string nome)
         {
-            new Classificacao(usuario, new NomeClassificacao(descricao), Categoria.Receita);
+            new Classificacao(usuario, new NomeClassificacaoPadrao(nome), Categoria.Receita);
         }
 
         [TestMethod]
         [DataTestMethod]
         [DataRow("Moradia", Categoria.Despesa, "1", Frequencia.Anual)]
-        public void DeveCriarClassificacaoFrequenciaComSucesso(string descricao, Categoria classificacao, string limiteEstipulado, Frequencia frequencia)
+        public void DeveCriarClassificacaoFrequenciaComSucesso(string nome, Categoria categoria, string limiteEstipulado, Frequencia frequencia)
         {
-            var objeto = new Classificacao(usuario, new NomeClassificacao(descricao), classificacao, decimal.Parse(limiteEstipulado), frequencia);
+            var objeto = new Classificacao(usuario, new NomeClassificacaoPadrao(nome), categoria, decimal.Parse(limiteEstipulado), frequencia);
             Assert.IsNotNull(objeto.Id);
         }
 
@@ -81,9 +81,9 @@ namespace ControleOrcamento.ContextoClassificacao.Domain.Teste.Entidade
         [DataTestMethod]
         [DataRow("Moradia", Categoria.Despesa, "-1")]
         [ExpectedException(typeof(ArgumentException))]
-        public void DeveFalharNaCriacaoDaClassificacaoParametroFrequenciaErrado(string descricao, Categoria classificacao, string limiteEstipulado)
+        public void DeveFalharNaCriacaoDaClassificacaoParametroFrequenciaErrado(string nome, Categoria categoria, string limiteEstipulado)
         {
-            new Classificacao(usuario, new NomeClassificacao(descricao), classificacao, decimal.Parse(limiteEstipulado), null);
+            new Classificacao(usuario, new NomeClassificacaoPadrao(nome), categoria, decimal.Parse(limiteEstipulado), null);
         }
 
         [TestMethod]

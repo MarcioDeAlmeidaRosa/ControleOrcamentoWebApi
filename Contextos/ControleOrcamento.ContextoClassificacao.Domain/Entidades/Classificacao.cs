@@ -15,7 +15,7 @@ namespace ControleOrcamento.ContextoClassificacao.Domain.Entidades
         /// <summary>
         /// Nome da classificação do lançamento no mundo real
         /// </summary>
-        public NomeClassificacao Nome { get; private set; }
+        public NomeClassificacaoPadrao Nome { get; private set; }
 
         /// <summary>
         /// Determina um valor limite que será levado em consideração para verificação dos lançamentos
@@ -40,7 +40,7 @@ namespace ControleOrcamento.ContextoClassificacao.Domain.Entidades
         /// <param name="categoria">Determina a categoria da classificação</param>
         /// <exception cref="ArgumentNullException">Lançado quando não for informado <paramref name="nome"/></exception>
         /// <exception cref="ArgumentException">Lançado quando o <paramref name="nome"/> informado náo é válido</exception>
-        public Classificacao(UsuarioBase usuario, NomeClassificacao nome, Categoria categoria) : this(usuario, nome, categoria, null, null)
+        public Classificacao(UsuarioBase usuario, NomeClassificacaoPadrao nome, Categoria categoria) : this(usuario, nome, categoria, null, null)
         {
 
         }
@@ -56,7 +56,7 @@ namespace ControleOrcamento.ContextoClassificacao.Domain.Entidades
         /// <exception cref="ArgumentNullException">Lançado quando não for informado <paramref name="usuario"/></exception>
         /// <exception cref="ArgumentNullException">Lançado quando não for informado <paramref name="nome"/></exception>
         /// <exception cref="ArgumentException">Lançado quando o <paramref name="nome"/> informado náo é válido</exception>
-        public Classificacao(UsuarioBase usuario, NomeClassificacao nome, Categoria categoria, decimal? limiteEstipulado, Frequencia? frequencia)
+        public Classificacao(UsuarioBase usuario, NomeClassificacaoPadrao nome, Categoria categoria, decimal? limiteEstipulado, Frequencia? frequencia)
         {
             UsuarioCriacao = usuario ?? throw new ArgumentNullException(nameof(usuario), "Não informado usuário do registro");
             Nome = nome ?? throw new ArgumentNullException(nameof(nome), "Não informado descrição da classificação");

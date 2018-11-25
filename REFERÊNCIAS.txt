@@ -54,6 +54,8 @@ Create test data with NBuilder and Faker
 https://www.jerriepelser.com/blog/creating-test-data-with-nbuilder-and-faker/
 Documentação
 https://code.google.com/archive/p/nbuilder/wikis/Overview_HowTo.wiki
+GITHUB
+https://github.com/nbuilder/nbuilder
 
 
 Configurar inicialização do teste

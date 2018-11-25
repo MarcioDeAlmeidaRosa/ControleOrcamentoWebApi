@@ -9,17 +9,16 @@ namespace ControleOrcamento.Mocks.Teste
 {
     public class ServicoUsuario : IServicoUsuario
     {
-        public UsuarioBase BuscarPorId(Guid guid)
-        {
-            return Builder<UsuarioMaster>.CreateNew()
+#pragma warning disable CS0618 // Type or member is obsolete
+        public UsuarioBase BuscarPorId(Guid guid) => Builder<UsuarioMaster>
+                .CreateNew()
                 .WithConstructor(() => new UsuarioMaster(
                            null,
                            new Email(Faker.Internet.Email()),
                            new NomePessoa(Faker.Name.First(), Faker.Name.Last())
                            )
                 )
-                //.With(c => c.Nome = new Contexto.Domain.ObjetosValor.NomePessoa(Faker.Name.First(), Faker.Name.Last()))
+#pragma warning restore CS0618 // Type or member is obsolete
                 .Build();
-        }
     }
 }
