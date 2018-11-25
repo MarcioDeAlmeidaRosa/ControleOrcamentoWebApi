@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using ControleOrcamento.Contexto.Domain.Entidade;
-using ControleOrcamento.ContextoClassificacao.Domain.Entidades;
 
 namespace ControleOrcamento.ContextoLancamento.Domain.Entidades
 {
@@ -14,6 +13,9 @@ namespace ControleOrcamento.ContextoLancamento.Domain.Entidades
         /// </summary>
         public Lancamento Finalida { get; set; }
 
+        /// <summary>
+        /// Representa a composição do lançamento
+        /// </summary>
         public IList<Prestacoes> Prestacoes { get; set; }
     }
 }
