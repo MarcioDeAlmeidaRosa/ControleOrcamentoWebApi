@@ -52,6 +52,9 @@ if ($env:APPVEYOR_REPO_NAME -eq $github) {
 
     Write-Output "Sonar: Running msbuild"
     msbuild /t:Rebuild $projectFile /p:targetFrameworks=$framework /verbosity:minimal
+	
+	Write-Output "OpenCover: Running OpenCover"
+	OpenCover.Console.exe -register:user -target:"C:\Program Files\dotnet\dotnet.exe" -targetargs:test -output:".\MyProject_coverage.xml" -oldstyle
 
     Write-Output "Sonar: Running end"
     SonarScanner.MSBuild.exe end /d:"sonar.login=$sonarToken"
