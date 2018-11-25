@@ -19,6 +19,7 @@
   <ItemGroup>
     <Folder Include="Comandos\" />
     <Folder Include="Manipuladores\" />
+    <Folder Include="ObjetosValor\" />
     <Folder Include="Pesquisas\" />
     <Folder Include="Repositorios\" />
     <Folder Include="Servicos\" />

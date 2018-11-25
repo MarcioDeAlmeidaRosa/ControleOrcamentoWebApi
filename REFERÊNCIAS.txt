@@ -1,0 +1,121 @@
+Modelando Domínios Ricos --> ASSISTINDO
+https://www.youtube.com/watch?v=gxNp_0xVqxI
+
+
+
+Exemplo de Criação de Arquitetura de Software .NET com Visual Studio
+https://www.youtube.com/watch?v=dYNT8OIjIuU
+
+
+Implementando o padrão CQRS em aplicações .NET
+https://www.youtube.com/watch?v=AQcsfIXQj18&t=1306s
+
+
+
+André Baltieri
+https://medium.com/@andrebaltieri
+
+https://github.com/andrebaltieri?after=Y3Vyc29yOnYyOpK5MjAxNi0xMC0xNlQyMzoxNjozMy0wMjowMM4CWnDd&tab=repositories
+
+
+exemplo de criação de domínio DDD
+https://www.youtube.com/results?search_query=exemplo+de+cria%C3%A7%C3%A3o+de+dom%C3%ADnio+DDD
+
+
+O que são subdomínios em DDD
+https://pt.stackoverflow.com/questions/49904/o-que-s%C3%A3o-e-como-identificar-subdom%C3%ADnios-em-
+
+
+
+COMO INSTALAR SQL SERVER
+https://www.eukhost.com/kb/how-to-install-microsoft-sql-server-express-2014/
+
+
+Melhorando a qualidade do seu código
+https://www.youtube.com/watch?v=IJgIXPkBVqY
+
+
+
+Mocking in C# Unit Tests - How To Test Data Access Code and More
+https://www.youtube.com/watch?v=DwbYxP-etMY
+
+How can I use Mock Objects in my unit tests and still use Code Coverage?
+https://stackoverflow.com/questions/336288/how-can-i-use-mock-objects-in-my-unit-tests-and-still-use-code-coverage
+
+MOQ
+https://github.com/Moq/moq4/wiki/Quickstart
+
+
+A Cleaner Way to Create Mocks in .NET
+https://medium.com/webcom-engineering-and-product/a-cleaner-way-to-create-mocks-in-net-6e039c3d1db0
+
+
+
+
+
+
+SonarLint
+https://www.sonarlint.org/visualstudio/
+
+
+INSTALAÇÃO DO --> SonarLint for Visual Studio 2017
+https://marketplace.visualstudio.com/items?itemName=SonarSource.SonarLintforVisualStudio2017
+
+REGRAS DO --> SonarLint
+https://rules.sonarsource.com/csharp
+
+
+SonarSource
+
+
+http://sonarqube.org/
+
+-------------------------------------------------------------------------------------------------------------
+Habilitando sonar ao github
+https://sonarcloud.io/projects/create
+
+Fornecer um token
+ControleOrcamentoWebApi: d4e156ba1c863fbddcb01c4be8c38c4429ea1f67
+O token é usado para identificar você quando uma análise é executada. Se ele tiver sido comprometido, você poderá revogá-lo a qualquer momento na sua conta de usuário .
+
+Chave do projeto:
+MarcioDeAlmeidaRosa_ControleOrcamentoWebApi
+
+Chave de organização:
+marciodealmeidarosa-github
+
+
+Baixe e descompacte o scanner para MSBuild
+E adicione o diretório do executável à %PATH%variável de ambiente
+https://docs.sonarqube.org/display/SCAN/Analyzing+with+SonarQube+Scanner+for+MSBuild
+
+
+
+Execute o scanner para MSBuild do seu computador
+A execução de uma análise da SonarCloud é direta. Você só precisa executar os seguintes comandos na raiz da sua solução.
+
+SonarScanner.MSBuild.exe begin /k:"MarcioDeAlmeidaRosa_ControleOrcamentoWebApi" /d:sonar.organization="marciodealmeidarosa-github" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.login="7754fa378d39542afdf5b9422d2a19db3eee94e7"
+
+
+MsBuild.exe /t:Rebuild
+
+
+SonarScanner.MSBuild.exe end /d:sonar.login="7754fa378d39542afdf5b9422d2a19db3eee94e7"
+
+
+Instruçõespara instalação do sonar
+https://docs.sonarqube.org/display/SCAN/Install+the+SonarScanner+for+MSBuild
+
+Download SDK Sonar (MSBuild)
+https://docs.sonarqube.org/display/SCAN/Install+the+SonarScanner+for+MSBuild
+
+C:\Users\HPI7_MARCIO\.dotnet\tools\.store\dotnet-sonarscanner\4.4.2\dotnet-sonarscanner\4.4.2\tools\netcoreapp2.1\any
+
+dotnet tool uninstall --global dotnet-sonarscanner
+
+instalação
+dotnet tool install --global dotnet-sonarscanner
+dotnet sonarscanner begin /k:"MarcioDeAlmeidaRosa_ControleOrcamentoWebApi"
+dotnet build
+dotnet sonarscanner end
+-------------------------------------------------------------------------------------------------------------

@@ -13,6 +13,7 @@
   <ItemGroup>
     <Folder Include="Comandos\" />
     <Folder Include="Manipuladores\" />
+    <Folder Include="ObjetosValor\" />
     <Folder Include="Servicos\" />
     <Folder Include="Repositorios\" />
     <Folder Include="Pesquisas\" />

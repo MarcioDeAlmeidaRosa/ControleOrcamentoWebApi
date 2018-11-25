@@ -12,7 +12,7 @@ namespace ControleOrcamento.ContextoLancamento.Domain.Entidades
         /// <summary>
         /// Representa a finalidade do lançamento na aplicação
         /// </summary>
-        public Finalidade Finalida { get; set; }
+        public Lancamento Finalida { get; set; }
 
         public IList<Prestacoes> Prestacoes { get; set; }
     }

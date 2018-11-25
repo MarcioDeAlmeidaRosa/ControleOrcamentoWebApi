@@ -111,7 +111,32 @@
             Representa o DV da conta corrente no mundo real
             </summary>
         </member>
-        <member name="M:ControleOrcamento.ContextoBancario.Domain.Entidades.ContaCorrente.#ctor(ControleOrcamento.Contexto.Domain.Entidade.Contratos.Usuario.UsuarioBase,ControleOrcamento.ContextoBancario.Domain.Entidades.Agencia,System.String,System.String)">
+        <member name="P:ControleOrcamento.ContextoBancario.Domain.Entidades.ContaCorrente.EhPrincipal">
+            <summary>
+            Quando verdadeiro a conta principal do usuário para lançamentos automáticos
+            </summary>
+        </member>
+        <member name="P:ControleOrcamento.ContextoBancario.Domain.Entidades.ContaCorrente.ControlaSaldo">
+            <summary>
+            Quando verdadeiro a aplicação controla o saldo na conta do usuário com os lancamentos de débitos/créditos
+            </summary>
+        </member>
+        <member name="P:ControleOrcamento.ContextoBancario.Domain.Entidades.ContaCorrente.Tipo">
+            <summary>
+            Representa o tipo de conta do usuário da aplicação
+            </summary>
+        </member>
+        <member name="P:ControleOrcamento.ContextoBancario.Domain.Entidades.ContaCorrente.Saldo">
+            <summary>
+            Representa o valor do saldo da conta corrente no mundo real
+            </summary>
+        </member>
+        <member name="P:ControleOrcamento.ContextoBancario.Domain.Entidades.ContaCorrente.Limite">
+            <summary>
+            Representa o valor do limite da conta corrente no mundo real
+            </summary>
+        </member>
+        <member name="M:ControleOrcamento.ContextoBancario.Domain.Entidades.ContaCorrente.#ctor(ControleOrcamento.Contexto.Domain.Entidade.Contratos.Usuario.UsuarioBase,ControleOrcamento.ContextoBancario.Domain.Entidades.Agencia,System.String,System.String,System.Nullable{ControleOrcamento.ContextoBancario.Domain.Enums.TipoContaCorrente},System.Nullable{System.Decimal},System.Nullable{System.Decimal})">
             <summary>
             Cria nova conta corrente garantindo seu estado válido
             </summary>
@@ -119,16 +144,42 @@
             <param name="agencia">Agência da conta corrente</param>
             <param name="numero">Número da conta corrente</param>
             <param name="dv">DV da conta corrente</param>
+            <param name="tipo">Tipo da conta corrente</param>
+            <param name="saldo">Saldo da conta corrente</param>
+            <param name="limite">Limite da conta corrente</param>
             <exception cref="T:System.ArgumentNullException">Lançado quando não for informado qualquer das propriedades:
             <paramref name="usuario"/>
             <paramref name="agencia"/>
             <paramref name="numero"/>
             <paramref name="dv"/>
+            <paramref name="tipo"/>
+            <paramref name="saldo"/>
+            <paramref name="limite"/>
             </exception>
         </member>
         <member name="M:ControleOrcamento.ContextoBancario.Domain.Entidades.ContaCorrente.#ctor">
             <summary>
             Construtor necessário para o ORM
+            </summary>
+        </member>
+        <member name="T:ControleOrcamento.ContextoBancario.Domain.Enums.TipoContaCorrente">
+            <summary>
+            Representa o tipo de conta corrente no mundo real
+            </summary>
+        </member>
+        <member name="F:ControleOrcamento.ContextoBancario.Domain.Enums.TipoContaCorrente.Corrente">
+            <summary>
+            Representa uma conta corrente do mundo real
+            </summary>
+        </member>
+        <member name="F:ControleOrcamento.ContextoBancario.Domain.Enums.TipoContaCorrente.Poupanca">
+            <summary>
+            Representa uma conta poupança do mundo real
+            </summary>
+        </member>
+        <member name="F:ControleOrcamento.ContextoBancario.Domain.Enums.TipoContaCorrente.Salario">
+            <summary>
+            Representa uma conta salário do mundo real
             </summary>
         </member>
     </members>

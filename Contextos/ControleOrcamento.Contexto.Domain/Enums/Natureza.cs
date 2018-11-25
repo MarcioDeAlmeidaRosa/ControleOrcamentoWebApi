@@ -1,9 +1,9 @@
 ﻿using System.ComponentModel;
 
-namespace ControleOrcamento.ContextoClassificacao.Domain.Enums
+namespace ControleOrcamento.Contexto.Domain.Enums
 {
     /// <summary>
-    /// Determina o tipo de lançamento na aplicação
+    /// Determina as naturezas de lançamento possíveis na apliçao
     /// </summary>
     public enum Natureza
     {

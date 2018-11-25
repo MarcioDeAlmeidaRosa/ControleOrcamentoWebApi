@@ -3,9 +3,9 @@
 namespace ControleOrcamento.ContextoClassificacao.Domain.Enums
 {
     /// <summary>
-    /// Representa os tipo de propósito permitido na aplicação
+    /// Representa a categoria da classificação no mundo real
     /// </summary>
-    public enum TipoClassificacao
+    public enum Categoria
     {
         /// <summary>
         /// Determina o propósito que a classificação é de entrada de valor

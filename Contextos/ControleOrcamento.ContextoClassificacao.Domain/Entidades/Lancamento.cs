@@ -3,9 +3,9 @@
 namespace ControleOrcamento.ContextoClassificacao.Domain.Entidades
 {
     /// <summary>
-    /// Representa a finalidade do lançamento na aplicação
+    /// Representa a opção de lançamento na aplicação
     /// </summary>
-    public sealed class Finalidade : EntidadeBase
+    public sealed class Lancamento : EntidadeBase
     {
         /// <summary>
         /// Representa a descrição da finalidade do lançamento

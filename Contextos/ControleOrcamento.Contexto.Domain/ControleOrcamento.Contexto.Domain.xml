@@ -24,16 +24,21 @@
             Representa o hash usado para a criptografica da senha
             </summary>
         </member>
-        <member name="M:ControleOrcamento.Contexto.Domain.Entidade.Contratos.Usuario.UsuarioAutenticacao.#ctor(System.String,ControleOrcamento.Contexto.Domain.ObjetosValor.SenhaSecreta)">
+        <member name="M:ControleOrcamento.Contexto.Domain.Entidade.Contratos.Usuario.UsuarioAutenticacao.#ctor(ControleOrcamento.Contexto.Domain.ObjetosValor.Email,ControleOrcamento.Contexto.Domain.ObjetosValor.NomePessoa,System.String,ControleOrcamento.Contexto.Domain.ObjetosValor.SenhaSecreta)">
             <summary>
             Cria usuário para efetuar login na aplicação
             </summary>
+            <param name="email">E-mail do usuário da aplicação</param>
+            <param name="nome">Nome do usuário da aplicação</param>
             <param name="login">Login do usuário para acessar a aplicação</param>
             <param name="senha">Senha do usuário para acessar a aplicação</param>
-            <exception cref="T:System.ArgumentNullException">Lançado quando não for informado qualquer das propriedades:
-            <paramref name="login"/>
-            <paramref name="senha"/>
-            </exception>
+            <exception cref="T:System.ArgumentNullException">Lançado quando não for informado <paramref name="email"/></exception>
+            <exception cref="T:System.ArgumentException">Lançado quando o <paramref name="email"/> informado náo é válido</exception>
+            <exception cref="T:System.ArgumentNullException">Lançado quando não for informado <paramref name="nome"/></exception>
+            <exception cref="T:System.ArgumentException">Lançado quando o <paramref name="nome"/> informado náo é válido</exception>
+            <exception cref="T:System.ArgumentNullException">Lançado quando não for informado <paramref name="login"/></exception>
+            <exception cref="T:System.ArgumentNullException">Lançado quando não for informada <paramref name="senha"/></exception>
+            <exception cref="T:System.ArgumentException">Lançado quando a <paramref name="senha"/> informada náo é válida</exception>
         </member>
         <member name="M:ControleOrcamento.Contexto.Domain.Entidade.Contratos.Usuario.UsuarioAutenticacao.#ctor">
             <summary>
@@ -50,6 +55,32 @@
             Representa o nome do usuário da aplicação
             </summary>
         </member>
+        <member name="P:ControleOrcamento.Contexto.Domain.Entidade.Contratos.Usuario.UsuarioBase.Bloqueado">
+            <summary>
+            Quando verdadeiro, indica que o usuário esta bloqueado para acesso a aplicação
+            </summary>
+        </member>
+        <member name="P:ControleOrcamento.Contexto.Domain.Entidade.Contratos.Usuario.UsuarioBase.Verificado">
+            <summary>
+            Quando verdadeiro, indica que o usuário já efetuou a verificação do login e esta apto para usar a aplicação
+            </summary>
+        </member>
+        <member name="M:ControleOrcamento.Contexto.Domain.Entidade.Contratos.Usuario.UsuarioBase.#ctor(ControleOrcamento.Contexto.Domain.ObjetosValor.Email,ControleOrcamento.Contexto.Domain.ObjetosValor.NomePessoa)">
+            <summary>
+            Cria um usuário candidato garantindo seu estado válido
+            </summary>
+            <param name="email">E-mail do usuário da aplicação</param>
+            <param name="nome">Nome do usuário da aplicação</param>
+            <exception cref="T:System.ArgumentNullException">Lançado quando não for informado <paramref name="email"/></exception>
+            <exception cref="T:System.ArgumentException">Lançado quando o <paramref name="email"/> informado náo é válido</exception>
+            <exception cref="T:System.ArgumentNullException">Lançado quando não for informado <paramref name="nome"/></exception>
+            <exception cref="T:System.ArgumentException">Lançado quando o <paramref name="nome"/> informado náo é válido</exception>
+        </member>
+        <member name="M:ControleOrcamento.Contexto.Domain.Entidade.Contratos.Usuario.UsuarioBase.#ctor">
+            <summary>
+            Construtor necessário para o ORM
+            </summary>
+        </member>
         <member name="T:ControleOrcamento.Contexto.Domain.Entidade.Contratos.Usuario.UsuarioCandidato">
             <summary>
             Representa as informações básicas de um usuário da aplicação
@@ -58,6 +89,19 @@
         <member name="P:ControleOrcamento.Contexto.Domain.Entidade.Contratos.Usuario.UsuarioCandidato.Email">
             <summary>
             Representa o e-mail da conta do usuário da aplicaçãao
+            </summary>
+        </member>
+        <member name="M:ControleOrcamento.Contexto.Domain.Entidade.Contratos.Usuario.UsuarioCandidato.#ctor(ControleOrcamento.Contexto.Domain.ObjetosValor.Email)">
+            <summary>
+            Cria um usuário candidato garantindo seu estado válido
+            </summary>
+            <param name="email"></param>
+            <exception cref="T:System.ArgumentNullException">Lançado quando não for informado <paramref name="email"/></exception>
+            <exception cref="T:System.ArgumentException">Lançado quando o <paramref name="email"/> informado náo é válido</exception>
+        </member>
+        <member name="M:ControleOrcamento.Contexto.Domain.Entidade.Contratos.Usuario.UsuarioCandidato.#ctor">
+            <summary>
+            Construtor necessário para o ORM
             </summary>
         </member>
         <member name="T:ControleOrcamento.Contexto.Domain.Entidade.EntidadeBase">
@@ -73,6 +117,86 @@
         <member name="P:ControleOrcamento.Contexto.Domain.Entidade.EntidadeBase.Id">
             <summary>
             Representa o identificador do registro na aplicação
+            </summary>
+        </member>
+        <member name="P:ControleOrcamento.Contexto.Domain.Entidade.EntidadeBase.DataCriacao">
+            <summary>
+            Representa a data de criação do registro na aplicação
+            </summary>
+        </member>
+        <member name="P:ControleOrcamento.Contexto.Domain.Entidade.EntidadeBase.UsuarioCriacao">
+            <summary>
+            Representa o usuário que criou o registro na aplicação
+            </summary>
+        </member>
+        <member name="P:ControleOrcamento.Contexto.Domain.Entidade.EntidadeBase.DataAlteracao">
+            <summary>
+            Representa a data de alteração do registro na aplicação
+            </summary>
+        </member>
+        <member name="P:ControleOrcamento.Contexto.Domain.Entidade.EntidadeBase.UsuarioAlteracao">
+            <summary>
+            Representa o usuário que alterou o registro na aplicação
+            </summary>
+        </member>
+        <member name="P:ControleOrcamento.Contexto.Domain.Entidade.EntidadeBase.DataExclusao">
+            <summary>
+            Representa a data de exclusão do registro na aplicação
+            </summary>
+        </member>
+        <member name="P:ControleOrcamento.Contexto.Domain.Entidade.EntidadeBase.UsuarioExclusao">
+            <summary>
+            Representa o usuário que excluiu o registro na aplicação
+            </summary>
+        </member>
+        <member name="T:ControleOrcamento.Contexto.Domain.Enums.Frequencia">
+            <summary>
+            Determina a frequencia que será considerada
+            </summary>
+        </member>
+        <member name="F:ControleOrcamento.Contexto.Domain.Enums.Frequencia.Diária">
+            <summary>
+            Determina a frequencia diária
+            </summary>
+        </member>
+        <member name="F:ControleOrcamento.Contexto.Domain.Enums.Frequencia.Semanal">
+            <summary>
+            Determina a frequencia semanal
+            </summary>
+        </member>
+        <member name="F:ControleOrcamento.Contexto.Domain.Enums.Frequencia.Mensal">
+            <summary>
+            Determina a frequencia Mensal
+            </summary>
+        </member>
+        <member name="F:ControleOrcamento.Contexto.Domain.Enums.Frequencia.Bimestral">
+            <summary>
+            Determina a frequencia Bimestral
+            </summary>
+        </member>
+        <member name="F:ControleOrcamento.Contexto.Domain.Enums.Frequencia.Semestral">
+            <summary>
+            Determina a frequencia Semestral
+            </summary>
+        </member>
+        <member name="F:ControleOrcamento.Contexto.Domain.Enums.Frequencia.Anual">
+            <summary>
+            Determina a frequencia Anual
+            </summary>
+        </member>
+        <member name="T:ControleOrcamento.Contexto.Domain.Enums.Natureza">
+            <summary>
+            Determina as naturezas de lançamento possíveis na apliçao
+            </summary>
+        </member>
+        <member name="F:ControleOrcamento.Contexto.Domain.Enums.Natureza.Credito">
+            <summary>
+            Determina o lançamento como entrada de valor
+            </summary>
+        </member>
+        <member name="F:ControleOrcamento.Contexto.Domain.Enums.Natureza.Debito">
+            <summary>
+            Determina o lançamento como saída de valor
             </summary>
         </member>
         <member name="T:ControleOrcamento.Contexto.Domain.ObjetosValor.Email">

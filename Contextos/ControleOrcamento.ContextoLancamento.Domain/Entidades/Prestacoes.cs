@@ -1,5 +1,5 @@
 ﻿using System;
-using ControleOrcamento.ContextoClassificacao.Domain.Enums;
+using ControleOrcamento.Contexto.Domain.Enums;
 
 namespace ControleOrcamento.ContextoLancamento.Domain.Entidades
 {
