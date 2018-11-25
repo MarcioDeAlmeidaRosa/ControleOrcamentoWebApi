@@ -47,7 +47,7 @@ if ($env:APPVEYOR_REPO_NAME -eq $github) {
     }
     else {
         Write-Output "Sonar: Running Sonar in non-preview mode, on branch $env:APPVEYOR_REPO_BRANCH"
-        SonarScanner.MSBuild.exe begin /k:"$sonarQubeId" /d:"sonar.organization=$sonarOrganization" /d:"sonar.host.url=$sonarUrl" /d:"sonar.cs.opencover.reportsPaths=&quot;opencover.xml&quot;" /d:"sonar.login=$sonarToken" /v:"$buildVersion"
+        SonarScanner.MSBuild.exe begin /k:"$sonarQubeId" /d:"sonar.organization=$sonarOrganization" /d:"sonar.host.url=$sonarUrl" /d:"sonar.login=$sonarToken" /v:"$buildVersion"
     }
 
     Write-Output "Sonar: Running msbuild"

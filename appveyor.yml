@@ -5,8 +5,15 @@ clone_folder: c:\projects\ControleOrcamentoWebApi
 
 install:
   - '"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\Tools\VsDevCmd.bat"'
+  
+  - cmd: choco install opencover.portable
+  - cmd: choco install dotnetcore-sdk
 
 skip_tags: true
 build_script:
   - ps: .\build.ps1
   - ps: .\run-sonar.ps1
+  
+test_script:
+  - OpenCover.Console.exe -register:user -target:"C:\Program Files\dotnet\dotnet.exe" -targetargs:test -output:".\MyProject_coverage.xml" -oldstyle
+  #- codecov -f "MyProject_coverage.xml"
