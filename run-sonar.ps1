@@ -47,6 +47,7 @@ if ($env:APPVEYOR_REPO_NAME -eq $github) {
     }
     else {
         Write-Output "Sonar: Running Sonar in non-preview mode, on branch $env:APPVEYOR_REPO_BRANCH"
+		Write-Output "/k:$sonarQubeId /d:sonar.organization=$sonarOrganization /d:sonar.host.url=$sonarUrl /d:sonar.login=$sonarToken /v:$buildVersion "
         SonarScanner.MSBuild.exe begin /k:"$sonarQubeId" /d:"sonar.organization=$sonarOrganization" /d:"sonar.host.url=$sonarUrl" /d:"sonar.login=$sonarToken" /v:"$buildVersion"
     }
 
@@ -54,9 +55,11 @@ if ($env:APPVEYOR_REPO_NAME -eq $github) {
     msbuild /t:Rebuild $projectFile /p:targetFrameworks=$framework /verbosity:minimal
 	
 	Write-Output "OpenCover: Running OpenCover"
-	OpenCover.Console.exe -register:user -target:"C:\Program Files\dotnet\dotnet.exe" -targetargs:test -output:".\MyProject_coverage.xml" -oldstyle
+	Write-Output "-register:user -target:C:\Program Files\dotnet\dotnet.exe -targetargs:test -output:.\coverage-report\coverage-cobertua-flex.xml -oldstyle"
+	OpenCover.Console.exe -register:user -target:"C:\Program Files\dotnet\dotnet.exe" -targetargs:test -output:".\coverage-report\coverage-cobertua-flex.xml" -oldstyle
 
     Write-Output "Sonar: Running end"
+	Write-Output "end /d:sonar.login=$sonarToken"
     SonarScanner.MSBuild.exe end /d:"sonar.login=$sonarToken"
 }
 else {
