@@ -124,9 +124,14 @@ dotnet tool uninstall --global dotnet-sonarscanner
 
 instalação
 dotnet tool install --global dotnet-sonarscanner
-dotnet sonarscanner begin /k:"MarcioDeAlmeidaRosa_ControleOrcamentoWebApi"
+                          
+dotnet sonarscanner begin /k:"MarcioDeAlmeidaRosa_ControleOrcamentoWebApi" /d:sonar.organization="marciodealmeidarosa-github" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.login="d1acfe8a3a3dbb679f3e36cf2c45b80cc06f2fc1" /v:"2.1.0-50"
 dotnet build
-dotnet sonarscanner end
+dotnet build "ControleOrcamentoWebApi.sln" /p:targetFrameworks="netcoreapp2.1" /verbosity:minimal
+dotnet sonarscanner end /d:sonar.login="d1acfe8a3a3dbb679f3e36cf2c45b80cc06f2fc1"
+
+
+OpenCover.Console.exe -register:user -target:"C:\Program Files\dotnet\dotnet.exe" -targetargs:test -output:".\coverage-report\coverage-cobertua-flex.xml" -oldstyle
 -------------------------------------------------------------------------------------------------------------
 
 C:\REPOS\GITHUB\ControleOrcamentoWebApi\ControleOrcamentoWebApi.sln.metaproj : error MSB4126: The specified solution con
