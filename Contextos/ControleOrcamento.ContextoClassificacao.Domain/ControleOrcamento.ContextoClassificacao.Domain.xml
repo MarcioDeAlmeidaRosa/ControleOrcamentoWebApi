@@ -1,0 +1,180 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ControleOrcamento.ContextoClassificacao.Domain</name>
+    </assembly>
+    <members>
+        <member name="T:ControleOrcamento.ContextoClassificacao.Domain.Entidades.Classificacao">
+            <summary>
+            Representa os tipos de despesas/receitas do mundo real
+            </summary>
+        </member>
+        <member name="P:ControleOrcamento.ContextoClassificacao.Domain.Entidades.Classificacao.Nome">
+            <summary>
+            Nome da classificação do lançamento no mundo real
+            </summary>
+        </member>
+        <member name="P:ControleOrcamento.ContextoClassificacao.Domain.Entidades.Classificacao.LimiteEstipulado">
+            <summary>
+            Determina um valor limite que será levado em consideração para verificação dos lançamentos
+            </summary>
+        </member>
+        <member name="P:ControleOrcamento.ContextoClassificacao.Domain.Entidades.Classificacao.Frequencia">
+            <summary>
+            Determina a frequencia que será levada em consideração para verificação dos lançamentos
+            </summary>
+        </member>
+        <member name="P:ControleOrcamento.ContextoClassificacao.Domain.Entidades.Classificacao.Categoria">
+            <summary>
+            Determina a categoria da classificação no mundo real
+            </summary>
+        </member>
+        <member name="M:ControleOrcamento.ContextoClassificacao.Domain.Entidades.Classificacao.#ctor(ControleOrcamento.Contexto.Domain.Entidade.Contratos.Usuario.UsuarioBase,ControleOrcamento.ContextoClassificacao.Domain.ObjetosValor.NomeClassificacaoPadrao,ControleOrcamento.ContextoClassificacao.Domain.Enums.Categoria)">
+            <summary>
+            Cria uma classificação garantindo seu estado válido
+            </summary>
+            <param name="usuario">Usuário responsável pelo registro</param>
+            <param name="nome">Determina o nome da classificação</param>
+            <param name="categoria">Determina a categoria da classificação</param>
+            <exception cref="T:System.ArgumentNullException">Lançado quando não for informado <paramref name="nome"/></exception>
+            <exception cref="T:System.ArgumentException">Lançado quando o <paramref name="nome"/> informado náo é válido</exception>
+        </member>
+        <member name="M:ControleOrcamento.ContextoClassificacao.Domain.Entidades.Classificacao.#ctor(ControleOrcamento.Contexto.Domain.Entidade.Contratos.Usuario.UsuarioBase,ControleOrcamento.ContextoClassificacao.Domain.ObjetosValor.NomeClassificacaoPadrao,ControleOrcamento.ContextoClassificacao.Domain.Enums.Categoria,System.Nullable{System.Decimal},System.Nullable{ControleOrcamento.Contexto.Domain.Enums.Frequencia})">
+            <summary>
+            Cria uma classificação garantindo seu estado válido
+            </summary>
+            <param name="usuario">Usuário responsável pelo registro</param>
+            <param name="nome">Determina o nome da classificação</param>
+            <param name="categoria">Determina a categoria da classificação</param>
+            <param name="limiteEstipulado">Estipula um vaor de limite para o total do lançamento</param>
+            <param name="frequencia">Estipula a frequencia para considerar o período</param>
+            <exception cref="T:System.ArgumentNullException">Lançado quando não for informado <paramref name="usuario"/></exception>
+            <exception cref="T:System.ArgumentNullException">Lançado quando não for informado <paramref name="nome"/></exception>
+            <exception cref="T:System.ArgumentException">Lançado quando o <paramref name="nome"/> informado náo é válido</exception>
+        </member>
+        <member name="M:ControleOrcamento.ContextoClassificacao.Domain.Entidades.Classificacao.#ctor">
+            <summary>
+            Construtor necessário para o ORM
+            </summary>
+        </member>
+        <member name="T:ControleOrcamento.ContextoClassificacao.Domain.Entidades.Lancamento">
+            <summary>
+            Representa a opção de lançamento na aplicação
+            </summary>
+        </member>
+        <member name="P:ControleOrcamento.ContextoClassificacao.Domain.Entidades.Lancamento.Nome">
+            <summary>
+            Representa o nome do lançamento
+            </summary>
+        </member>
+        <member name="P:ControleOrcamento.ContextoClassificacao.Domain.Entidades.Lancamento.Classificacao">
+            <summary>
+            Representa a classificação da finalidade do lançamento
+            </summary>
+        </member>
+        <member name="M:ControleOrcamento.ContextoClassificacao.Domain.Entidades.Lancamento.#ctor(ControleOrcamento.Contexto.Domain.Entidade.Contratos.Usuario.UsuarioBase,ControleOrcamento.ContextoClassificacao.Domain.ObjetosValor.NomeLancamentoPadrao,ControleOrcamento.ContextoClassificacao.Domain.Entidades.Classificacao)">
+            <summary>
+            Cria um lançamento garantindo seu estado válido
+            </summary>
+            <param name="usuario"></param>
+            <param name="nome"></param>
+            <param name="classificacao"></param>
+        </member>
+        <member name="M:ControleOrcamento.ContextoClassificacao.Domain.Entidades.Lancamento.#ctor">
+            <summary>
+            Construtor necessário para o ORM
+            </summary>
+        </member>
+        <member name="T:ControleOrcamento.ContextoClassificacao.Domain.Enums.Categoria">
+            <summary>
+            Representa a categoria da classificação no mundo real
+            </summary>
+        </member>
+        <member name="F:ControleOrcamento.ContextoClassificacao.Domain.Enums.Categoria.Receita">
+            <summary>
+            Determina o propósito que a classificação é de entrada de valor
+            </summary>
+        </member>
+        <member name="F:ControleOrcamento.ContextoClassificacao.Domain.Enums.Categoria.Despesa">
+            <summary>
+            Representa que a classificação é de saída de valor
+            </summary>
+        </member>
+        <member name="T:ControleOrcamento.ContextoClassificacao.Domain.ObjetosValor.NomeClassificacaoPadrao">
+            <summary>
+            Representa um nome válido no contexto de classificação
+            </summary>
+        </member>
+        <member name="P:ControleOrcamento.ContextoClassificacao.Domain.ObjetosValor.NomeClassificacaoPadrao.Nome">
+            <summary>
+            Representa o nome do lançamento
+            </summary>
+        </member>
+        <member name="M:ControleOrcamento.ContextoClassificacao.Domain.ObjetosValor.NomeClassificacaoPadrao.#ctor(System.String)">
+            <summary>
+            Cria um nome válido para a aplicação
+            </summary>
+            <param name="nome">Nome para atribuição</param>
+        </member>
+        <member name="M:ControleOrcamento.ContextoClassificacao.Domain.ObjetosValor.NomeClassificacaoPadrao.ToString">
+            <summary>
+            Retorna conteúdo do objeto em string
+            </summary>
+            <returns>Retorna o nome do lançamento</returns>
+        </member>
+        <member name="T:ControleOrcamento.ContextoClassificacao.Domain.ObjetosValor.NomeLancamentoPadrao">
+            <summary>
+            Representa um nome válido no contexto de classificação
+            </summary>
+        </member>
+        <member name="P:ControleOrcamento.ContextoClassificacao.Domain.ObjetosValor.NomeLancamentoPadrao.Nome">
+            <summary>
+            Representa o nome do lançamento
+            </summary>
+        </member>
+        <member name="M:ControleOrcamento.ContextoClassificacao.Domain.ObjetosValor.NomeLancamentoPadrao.#ctor(System.String)">
+            <summary>
+            Cria um nome válido para a aplicação
+            </summary>
+            <param name="nome">Nome para atribuição</param>
+        </member>
+        <member name="M:ControleOrcamento.ContextoClassificacao.Domain.ObjetosValor.NomeLancamentoPadrao.ToString">
+            <summary>
+            Retorna conteúdo do objeto em string
+            </summary>
+            <returns>Retorna o nome do lançamento</returns>
+        </member>
+        <member name="T:ControleOrcamento.ContextoClassificacao.Domain.Servicos.IServicoClassificacao">
+            <summary>
+            Responsável por determinar os serviços da classificação
+            </summary>
+        </member>
+        <member name="M:ControleOrcamento.ContextoClassificacao.Domain.Servicos.IServicoClassificacao.ListaClassificacaoDoUsuario(ControleOrcamento.Contexto.Domain.Entidade.Contratos.Usuario.UsuarioBase)">
+            <summary>
+            Responsável por listar as classificações do usuário
+            </summary>
+            <param name="usuario">Usuário responsável pelo cadastro do registro</param>
+            <returns>Lista de classificação do usuário informado</returns>
+        </member>
+        <member name="M:ControleOrcamento.ContextoClassificacao.Domain.Servicos.IServicoClassificacao.ClassificacaoDoUsuarioPorID(ControleOrcamento.Contexto.Domain.Entidade.Contratos.Usuario.UsuarioBase,System.Guid)">
+            <summary>
+            Responsável por buscar a classificação por ID
+            </summary>
+            <param name="usuario">Usuário responsável pelo cadastro do registro</param>
+            <param name="id">ID da classificação</param>
+            <returns>Classificação encontrada</returns>
+        </member>
+        <member name="T:ControleOrcamento.ContextoClassificacao.Domain.Servicos.IServicoLancamento">
+            <summary>
+            Responsável por determinar os serviços do lançamento
+            </summary>
+        </member>
+        <member name="M:ControleOrcamento.ContextoClassificacao.Domain.Servicos.IServicoLancamento.ListaLancamentoDoUsuario(ControleOrcamento.Contexto.Domain.Entidade.Contratos.Usuario.UsuarioBase)">
+            <summary>
+            Responsável por listar os lançamentos do usuário
+            </summary>
+            <param name="usuario">Usuário responsável pelo cadastro do registro</param>
+            <returns>Lista de lancçamento do usuário informado</returns>
+        </member>
+    </members>
+</doc>

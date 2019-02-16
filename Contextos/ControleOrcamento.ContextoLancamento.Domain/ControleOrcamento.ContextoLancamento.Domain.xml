@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ControleOrcamento.ContextoLancamento.Domain</name>
+    </assembly>
+    <members>
+        <member name="T:ControleOrcamento.ContextoLancamento.Domain.Entidades.Lancamento">
+            <summary>
+            Representa o lançamento na aplicação
+            </summary>
+        </member>
+        <member name="P:ControleOrcamento.ContextoLancamento.Domain.Entidades.Lancamento.Finalida">
+            <summary>
+            Representa a finalidade do lançamento na aplicação
+            </summary>
+        </member>
+        <member name="P:ControleOrcamento.ContextoLancamento.Domain.Entidades.Lancamento.Prestacoes">
+            <summary>
+            Representa a composição do lançamento
+            </summary>
+        </member>
+        <member name="T:ControleOrcamento.ContextoLancamento.Domain.Entidades.Prestacoes">
+            <summary>
+            Representa a composição dos itens do lançamento
+            </summary>
+        </member>
+        <member name="P:ControleOrcamento.ContextoLancamento.Domain.Entidades.Prestacoes.Natureza">
+            <summary>
+            Representa a natureza do lançamento
+            </summary>
+        </member>
+        <member name="P:ControleOrcamento.ContextoLancamento.Domain.Entidades.Prestacoes.DataVencimento">
+            <summary>
+            Representa a date de vencimento do lançamento
+            </summary>
+        </member>
+        <member name="P:ControleOrcamento.ContextoLancamento.Domain.Entidades.Prestacoes.ValorAVencer">
+            <summary>
+            Representa o valor do lançamento
+            </summary>
+        </member>
+        <member name="P:ControleOrcamento.ContextoLancamento.Domain.Entidades.Prestacoes.DataPagamento">
+            <summary>
+            Representa a do pagamento do lançamento
+            </summary>
+        </member>
+        <member name="P:ControleOrcamento.ContextoLancamento.Domain.Entidades.Prestacoes.ValorPago">
+            <summary>
+            Representa o valor pago do lançamento
+            </summary>
+        </member>
+    </members>
+</doc>
