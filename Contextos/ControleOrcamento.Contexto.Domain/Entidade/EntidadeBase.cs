@@ -1,6 +1,6 @@
-﻿using System;
+﻿using ControleOrcamento.Contexto.Domain.Entidade.Contratos.Usuario;
 using Flunt.Notifications;
-using ControleOrcamento.Contexto.Domain.Entidade.Contratos.Usuario;
+using System;
 
 namespace ControleOrcamento.Contexto.Domain.Entidade
 {

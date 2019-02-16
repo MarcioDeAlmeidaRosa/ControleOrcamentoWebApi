@@ -147,6 +147,24 @@
             Construtor necessário para o ORM
             </summary>
         </member>
+        <member name="M:ControleOrcamento.ContextoBancario.Domain.Entidades.ContaCorrente.Depositar(System.Decimal)">
+            <summary>
+            Responsável por efetuar depósito na conta corrente
+            </summary>
+            <param name="valor">Valor que será depositado na conta corrente</param>
+            <exception cref="T:System.ArgumentException">Lançada exception quando o valor informado no parâmetro 
+            <paramref name="valor"/> náo for válido, somente é aceito valor maior que 0.
+            </exception>
+        </member>
+        <member name="M:ControleOrcamento.ContextoBancario.Domain.Entidades.ContaCorrente.Sacar(System.Decimal)">
+            <summary>
+            Resmposável por efetuar saque na conta corrente
+            </summary>
+            <param name="valor">Valor que será sacado na conta corrente</param>
+            <exception cref="T:System.ArgumentException">Lançada exception quando o valor informado no parâmetro 
+            <paramref name="valor"/> náo for válido, somente é aceito valor maior que 0.
+            </exception>
+        </member>
         <member name="T:ControleOrcamento.ContextoBancario.Domain.Enums.TipoContaCorrente">
             <summary>
             Representa o tipo de conta corrente no mundo real
@@ -166,6 +184,23 @@
             <summary>
             Representa uma conta salário do mundo real
             </summary>
+        </member>
+        <member name="T:ControleOrcamento.ContextoBancario.Domain.Servicos.IServicoContaCorrente">
+            <summary>
+            Reponsável por definir funcionalidades possíveis de uma conta corrente
+            </summary>
+        </member>
+        <member name="M:ControleOrcamento.ContextoBancario.Domain.Servicos.IServicoContaCorrente.Depositar(System.Decimal)">
+            <summary>
+            Define contrato para depósito de valores em conta corrente
+            </summary>
+            <param name="valor"></param>
+        </member>
+        <member name="M:ControleOrcamento.ContextoBancario.Domain.Servicos.IServicoContaCorrente.Sacar(System.Decimal)">
+            <summary>
+            Define contrato para efetuar saque em conta corrente
+            </summary>
+            <param name="valor"></param>
         </member>
     </members>
 </doc>

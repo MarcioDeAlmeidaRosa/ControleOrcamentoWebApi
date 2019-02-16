@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using ControleOrcamento.Contexto.Domain.Entidade.Contratos.Usuario;
 using ControleOrcamento.ContextoClassificacao.Domain.Entidades;
-using ControleOrcamento.Contexto.Domain.Entidade.Contratos.Usuario;
+using System.Collections.Generic;
 
 namespace ControleOrcamento.ContextoClassificacao.Domain.Servicos
 {

@@ -1,6 +1,6 @@
-﻿using System;
-using ControleOrcamento.Contexto.Domain.Entidade;
+﻿using ControleOrcamento.Contexto.Domain.Entidade;
 using ControleOrcamento.Contexto.Domain.Entidade.Contratos.Usuario;
+using System;
 
 namespace ControleOrcamento.ContextoBancario.Domain.Entidades
 {
@@ -22,17 +22,17 @@ namespace ControleOrcamento.ContextoBancario.Domain.Entidades
         /// <summary>
         /// Cria novo banco garantindo seu estado válido
         /// </summary>
-        /// <param name="usuario">Usuário responsável pelo registro</param>
+        /// <param name="usuarioCriacao">Usuário responsável pelo registro</param>
         /// <param name="numero">Número do banco</param>
         /// <param name="nome">Nome do banco</param>
         /// <exception cref="ArgumentNullException">Lançado quando não for informado qualquer das propriedades:
-        /// <paramref name="usuario"/>
+        /// <paramref name="usuarioCriacao"/>
         /// <paramref name="numero"/>
         /// <paramref name="nome"/>
         /// </exception>
-        public Banco(UsuarioBase usuario, string numero, string nome)
+        public Banco(UsuarioBase usuarioCriacao, string numero, string nome)
         {
-            UsuarioCriacao = usuario ?? throw new ArgumentNullException(nameof(usuario), "Não informado usuário do registro");
+            UsuarioCriacao = usuarioCriacao ?? throw new ArgumentNullException(nameof(usuarioCriacao), "Não informado usuário do registro");
             Numero = numero ?? throw new ArgumentNullException(nameof(numero), "Não informado número do banco");
             Nome = nome ?? throw new ArgumentNullException(nameof(nome), "Não informado nome do banco");
         }

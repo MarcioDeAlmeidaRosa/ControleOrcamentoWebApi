@@ -18,6 +18,11 @@ namespace ControleOrcamento.Contexto.Domain.Enums
         [Description("Semanal")]
         Semanal,
         /// <summary>
+        /// Determina a frequencia Quinzenal
+        /// </summary>
+        [Description("Quinzenal")]
+        Quinzenal,
+        /// <summary>
         /// Determina a frequencia Mensal
         /// </summary>
         [Description("Mensal")]

@@ -1,5 +1,5 @@
-﻿using System;
-using ControleOrcamento.Contexto.Domain.ObjetosValor;
+﻿using ControleOrcamento.Contexto.Domain.ObjetosValor;
+using System;
 
 namespace ControleOrcamento.Contexto.Domain.Entidade.Contratos.Usuario
 {
@@ -16,14 +16,14 @@ namespace ControleOrcamento.Contexto.Domain.Entidade.Contratos.Usuario
         /// <summary>
         /// Cria um usuário candidato garantindo seu estado válido
         /// </summary>
-        /// <param name="usuario">Usuário responsável pelo registro</param>
+        /// <param name="usuarioCriacao">Usuário responsável pelo registro</param>
         /// <param name="email"></param>
         /// <exception cref="ArgumentNullException">Lançado quando não for informado <paramref name="email"/></exception>
         /// <exception cref="ArgumentException">Lançado quando o <paramref name="email"/> informado náo é válido</exception>
-        protected UsuarioCandidato(UsuarioBase usuario, Email email)
+        protected UsuarioCandidato(UsuarioBase usuarioCriacao, Email email)
         {
-            UsuarioCriacao = usuario;
-            Email = email ?? throw new ArgumentNullException(nameof(email), "Email do usuário não informado");
+            UsuarioCriacao = usuarioCriacao;
+            Email = email ?? throw new ArgumentNullException(nameof(email), "E-mail do usuário não informado");
             if (email.Invalid)
             {
                 throw new ArgumentException(email.Notifications.ToString(), nameof(email));

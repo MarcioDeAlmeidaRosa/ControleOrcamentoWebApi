@@ -1,7 +1,7 @@
-﻿using System;
-using ControleOrcamento.Contexto.Domain.Entidade;
+﻿using ControleOrcamento.Contexto.Domain.Entidade;
 using ControleOrcamento.Contexto.Domain.Entidade.Contratos.Usuario;
 using ControleOrcamento.ContextoClassificacao.Domain.ObjetosValor;
+using System;
 
 namespace ControleOrcamento.ContextoClassificacao.Domain.Entidades
 {
@@ -23,12 +23,12 @@ namespace ControleOrcamento.ContextoClassificacao.Domain.Entidades
         /// <summary>
         /// Cria um lançamento garantindo seu estado válido
         /// </summary>
-        /// <param name="usuario"></param>
+        /// <param name="usuarioCriacao"></param>
         /// <param name="nome"></param>
         /// <param name="classificacao"></param>
-        public Lancamento(UsuarioBase usuario, NomeLancamentoPadrao nome, Classificacao classificacao)
+        public Lancamento(UsuarioBase usuarioCriacao, NomeLancamentoPadrao nome, Classificacao classificacao)
         {
-            UsuarioCriacao = usuario ?? throw new ArgumentNullException(nameof(usuario), "Não informado usuário do registro");
+            UsuarioCriacao = usuarioCriacao ?? throw new ArgumentNullException(nameof(usuarioCriacao), "Não informado usuário do registro");
             Nome = nome ?? throw new ArgumentNullException(nameof(nome), "Não informado nome do lançamento");
             if (nome.Invalid)
             {

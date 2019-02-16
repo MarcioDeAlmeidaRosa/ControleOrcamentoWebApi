@@ -1,5 +1,5 @@
-﻿using System;
-using ControleOrcamento.ContextoBancario.Domain.Servicos;
+﻿using ControleOrcamento.ContextoBancario.Domain.Servicos;
+using System;
 
 namespace ControleOrcamento.ContextoBancario.Domain.Teste.Mocks
 {

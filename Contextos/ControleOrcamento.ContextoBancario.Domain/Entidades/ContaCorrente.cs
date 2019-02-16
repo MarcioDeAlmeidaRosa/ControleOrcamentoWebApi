@@ -1,8 +1,8 @@
-﻿using System;
-using ControleOrcamento.Contexto.Domain.Entidade;
+﻿using ControleOrcamento.Contexto.Domain.Entidade;
+using ControleOrcamento.Contexto.Domain.Entidade.Contratos.Usuario;
 using ControleOrcamento.ContextoBancario.Domain.Enums;
 using ControleOrcamento.ContextoBancario.Domain.Servicos;
-using ControleOrcamento.Contexto.Domain.Entidade.Contratos.Usuario;
+using System;
 
 namespace ControleOrcamento.ContextoBancario.Domain.Entidades
 {
@@ -32,9 +32,10 @@ namespace ControleOrcamento.ContextoBancario.Domain.Entidades
         public string EhPrincipal { get; set; }
 
         /// <summary>
-        /// Quando verdadeiro a aplicação controla o saldo na conta do usuário com os lancamentos de débitos/créditos
+        /// Quando verdadeiro a aplicação controla o saldo da 
+        /// conta do usuário com os lançamentos de débitos/créditos
         /// </summary>
-        public string ControlaSaldo { get; set; }
+        public bool ControlaSaldo { get; set; }
 
         /// <summary>
         /// Representa o tipo de conta do usuário da aplicação
@@ -54,7 +55,7 @@ namespace ControleOrcamento.ContextoBancario.Domain.Entidades
         /// <summary>
         /// Cria nova conta corrente garantindo seu estado válido
         /// </summary>
-        /// <param name="usuario">Usuário responsável pelo registro</param>
+        /// <param name="usuarioCriacao">Usuário responsável pelo registro</param>
         /// <param name="agencia">Agência da conta corrente</param>
         /// <param name="numero">Número da conta corrente</param>
         /// <param name="dv">DV da conta corrente</param>
@@ -62,7 +63,7 @@ namespace ControleOrcamento.ContextoBancario.Domain.Entidades
         /// <param name="saldo">Saldo da conta corrente</param>
         /// <param name="limite">Limite da conta corrente</param>
         /// <exception cref="ArgumentNullException">Lançado quando não for informado qualquer das propriedades:
-        /// <paramref name="usuario"/>
+        /// <paramref name="usuarioCriacao"/>
         /// <paramref name="agencia"/>
         /// <paramref name="numero"/>
         /// <paramref name="dv"/>
@@ -70,9 +71,9 @@ namespace ControleOrcamento.ContextoBancario.Domain.Entidades
         /// <paramref name="saldo"/>
         /// <paramref name="limite"/>
         /// </exception>
-        public ContaCorrente(UsuarioBase usuario, Agencia agencia, string numero, string dv, TipoContaCorrente? tipo, decimal? saldo, decimal? limite)
+        public ContaCorrente(UsuarioBase usuarioCriacao, Agencia agencia, string numero, string dv, TipoContaCorrente? tipo, decimal? saldo, decimal? limite)
         {
-            UsuarioCriacao = usuario ?? throw new ArgumentNullException(nameof(usuario), "Não informado usuário do registro");
+            UsuarioCriacao = usuarioCriacao ?? throw new ArgumentNullException(nameof(usuarioCriacao), "Não informado usuário do registro");
             Agencia = agencia ?? throw new ArgumentNullException(nameof(agencia), "Não informada agência da conta corrente");
             Numero = numero ?? throw new ArgumentNullException(nameof(numero), "Não informado número da conta corrente");
             DV = dv ?? throw new ArgumentNullException(nameof(dv), "Não informado o DV da conta corrente");
@@ -95,10 +96,12 @@ namespace ControleOrcamento.ContextoBancario.Domain.Entidades
         /// </summary>
         /// <param name="valor">Valor que será depositado na conta corrente</param>
         /// <exception cref="ArgumentException">Lançada exception quando o valor informado no parâmetro 
-        /// <paramref name="valor"/> náo for válido, somente é aceito valor maior que 0.
+        /// <paramref name="valor"/> não for válido, somente é aceito valor maior que 0.
         /// </exception>
         public void Depositar(decimal valor)
         {
+            if (!ControlaSaldo) return;
+
             if (valor <= 0)
             {
                 throw new ArgumentException("Valor para depósito não é válido", nameof(valor));
@@ -111,10 +114,12 @@ namespace ControleOrcamento.ContextoBancario.Domain.Entidades
         /// </summary>
         /// <param name="valor">Valor que será sacado na conta corrente</param>
         /// <exception cref="ArgumentException">Lançada exception quando o valor informado no parâmetro 
-        /// <paramref name="valor"/> náo for válido, somente é aceito valor maior que 0.
+        /// <paramref name="valor"/> não for válido, somente é aceito valor maior que 0.
         /// </exception>
         public void Sacar(decimal valor)
         {
+            if (!ControlaSaldo) return;
+
             if (valor <= 0)
             {
                 throw new ArgumentException("Valor para saque não é válido", nameof(valor));
@@ -123,7 +128,7 @@ namespace ControleOrcamento.ContextoBancario.Domain.Entidades
             if (Limite >= ((Saldo - valor) * -1))
             {
                 //TODO: criar uma exception específica para esta regra
-                throw new Exception("Não existe saldo na conta corrente para saldo");
+                throw new Exception("Não existe saldo na conta corrente para sacar");
             }
             Saldo -= valor;
         }

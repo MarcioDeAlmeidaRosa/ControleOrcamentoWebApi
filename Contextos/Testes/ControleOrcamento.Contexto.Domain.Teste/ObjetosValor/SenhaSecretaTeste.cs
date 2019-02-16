@@ -1,5 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ControleOrcamento.Contexto.Domain.ObjetosValor;
+﻿using ControleOrcamento.Contexto.Domain.ObjetosValor;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace ControleOrcamento.Contexto.Domain.Teste.ObjetosValor
 {

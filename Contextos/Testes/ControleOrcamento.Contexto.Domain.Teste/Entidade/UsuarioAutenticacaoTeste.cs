@@ -1,8 +1,8 @@
-﻿using System;
+﻿using ControleOrcamento.Contexto.Domain.Entidade.Contratos.Usuario;
+using ControleOrcamento.Contexto.Domain.ObjetosValor;
 using ControleOrcamento.Mocks.Teste;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ControleOrcamento.Contexto.Domain.ObjetosValor;
-using ControleOrcamento.Contexto.Domain.Entidade.Contratos.Usuario;
+using System;
 
 namespace ControleOrcamento.Contexto.Domain.Teste.Entidade
 {

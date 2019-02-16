@@ -1,9 +1,9 @@
-﻿using System;
-using ControleOrcamento.Contexto.Domain.Enums;
-using ControleOrcamento.Contexto.Domain.Entidade;
-using ControleOrcamento.ContextoClassificacao.Domain.Enums;
+﻿using ControleOrcamento.Contexto.Domain.Entidade;
 using ControleOrcamento.Contexto.Domain.Entidade.Contratos.Usuario;
+using ControleOrcamento.Contexto.Domain.Enums;
+using ControleOrcamento.ContextoClassificacao.Domain.Enums;
 using ControleOrcamento.ContextoClassificacao.Domain.ObjetosValor;
+using System;
 
 namespace ControleOrcamento.ContextoClassificacao.Domain.Entidades
 {
@@ -35,12 +35,12 @@ namespace ControleOrcamento.ContextoClassificacao.Domain.Entidades
         /// <summary>
         /// Cria uma classificação garantindo seu estado válido
         /// </summary>
-        /// <param name="usuario">Usuário responsável pelo registro</param>
+        /// <param name="usuarioCriacao">Usuário responsável pelo registro</param>
         /// <param name="nome">Determina o nome da classificação</param>
         /// <param name="categoria">Determina a categoria da classificação</param>
         /// <exception cref="ArgumentNullException">Lançado quando não for informado <paramref name="nome"/></exception>
         /// <exception cref="ArgumentException">Lançado quando o <paramref name="nome"/> informado náo é válido</exception>
-        public Classificacao(UsuarioBase usuario, NomeClassificacaoPadrao nome, Categoria categoria) : this(usuario, nome, categoria, null, null)
+        public Classificacao(UsuarioBase usuarioCriacao, NomeClassificacaoPadrao nome, Categoria categoria) : this(usuarioCriacao, nome, categoria, null, null)
         {
 
         }
@@ -48,17 +48,17 @@ namespace ControleOrcamento.ContextoClassificacao.Domain.Entidades
         /// <summary>
         /// Cria uma classificação garantindo seu estado válido
         /// </summary>
-        /// <param name="usuario">Usuário responsável pelo registro</param>
+        /// <param name="usuarioCriacao">Usuário responsável pelo registro</param>
         /// <param name="nome">Determina o nome da classificação</param>
         /// <param name="categoria">Determina a categoria da classificação</param>
         /// <param name="limiteEstipulado">Estipula um vaor de limite para o total do lançamento</param>
         /// <param name="frequencia">Estipula a frequencia para considerar o período</param>
-        /// <exception cref="ArgumentNullException">Lançado quando não for informado <paramref name="usuario"/></exception>
+        /// <exception cref="ArgumentNullException">Lançado quando não for informado <paramref name="usuarioCriacao"/></exception>
         /// <exception cref="ArgumentNullException">Lançado quando não for informado <paramref name="nome"/></exception>
         /// <exception cref="ArgumentException">Lançado quando o <paramref name="nome"/> informado náo é válido</exception>
-        public Classificacao(UsuarioBase usuario, NomeClassificacaoPadrao nome, Categoria categoria, decimal? limiteEstipulado, Frequencia? frequencia)
+        public Classificacao(UsuarioBase usuarioCriacao, NomeClassificacaoPadrao nome, Categoria categoria, decimal? limiteEstipulado, Frequencia? frequencia)
         {
-            UsuarioCriacao = usuario ?? throw new ArgumentNullException(nameof(usuario), "Não informado usuário do registro");
+            UsuarioCriacao = usuarioCriacao ?? throw new ArgumentNullException(nameof(usuarioCriacao), "Não informado usuário do registro");
             Nome = nome ?? throw new ArgumentNullException(nameof(nome), "Não informado descrição da classificação");
             if (nome.Invalid)
             {

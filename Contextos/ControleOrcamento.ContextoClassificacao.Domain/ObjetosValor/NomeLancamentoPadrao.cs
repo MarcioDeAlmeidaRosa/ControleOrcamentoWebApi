@@ -1,5 +1,5 @@
-﻿using Flunt.Validations;
-using ControleOrcamento.Contexto.Domain.ObjetosValor;
+﻿using ControleOrcamento.Contexto.Domain.ObjetosValor;
+using Flunt.Validations;
 
 namespace ControleOrcamento.ContextoClassificacao.Domain.ObjetosValor
 {
