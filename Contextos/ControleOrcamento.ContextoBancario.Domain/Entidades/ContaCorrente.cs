@@ -1,6 +1,7 @@
 ﻿using System;
 using ControleOrcamento.Contexto.Domain.Entidade;
 using ControleOrcamento.ContextoBancario.Domain.Enums;
+using ControleOrcamento.ContextoBancario.Domain.Servicos;
 using ControleOrcamento.Contexto.Domain.Entidade.Contratos.Usuario;
 
 namespace ControleOrcamento.ContextoBancario.Domain.Entidades
@@ -8,7 +9,7 @@ namespace ControleOrcamento.ContextoBancario.Domain.Entidades
     /// <summary>
     /// Representa uma conta corrente no mundo real
     /// </summary>
-    public sealed class ContaCorrente : EntidadeBase
+    public sealed class ContaCorrente : EntidadeBase, IServicoContaCorrente
     {
         /// <summary>
         /// Representa a agência bancária da conta corrente no mundo real
@@ -87,6 +88,44 @@ namespace ControleOrcamento.ContextoBancario.Domain.Entidades
         public ContaCorrente()
         {
 
+        }
+
+        /// <summary>
+        /// Responsável por efetuar depósito na conta corrente
+        /// </summary>
+        /// <param name="valor">Valor que será depositado na conta corrente</param>
+        /// <exception cref="ArgumentException">Lançada exception quando o valor informado no parâmetro 
+        /// <paramref name="valor"/> náo for válido, somente é aceito valor maior que 0.
+        /// </exception>
+        public void Depositar(decimal valor)
+        {
+            if (valor <= 0)
+            {
+                throw new ArgumentException("Valor para depósito não é válido", nameof(valor));
+            }
+            Saldo += valor;
+        }
+
+        /// <summary>
+        /// Resmposável por efetuar saque na conta corrente
+        /// </summary>
+        /// <param name="valor">Valor que será sacado na conta corrente</param>
+        /// <exception cref="ArgumentException">Lançada exception quando o valor informado no parâmetro 
+        /// <paramref name="valor"/> náo for válido, somente é aceito valor maior que 0.
+        /// </exception>
+        public void Sacar(decimal valor)
+        {
+            if (valor <= 0)
+            {
+                throw new ArgumentException("Valor para saque não é válido", nameof(valor));
+            }
+
+            if (Limite >= ((Saldo - valor) * -1))
+            {
+                //TODO: criar uma exception específica para esta regra
+                throw new Exception("Não existe saldo na conta corrente para saldo");
+            }
+            Saldo -= valor;
         }
     }
 }

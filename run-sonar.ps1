@@ -5,6 +5,7 @@ $github = "MarcioDeAlmeidaRosa/ControleOrcamentoWebApi"
 $baseBranch = "master"
 $framework = "netcoreapp2.1"
 $sonar_token = "d1acfe8a3a3dbb679f3e36cf2c45b80cc06f2fc1"
+$reportPath = "coverage-report/coverage-cobertua-flex.xml"
 
 if ($env:APPVEYOR_REPO_NAME -eq $github) {
 
@@ -47,8 +48,8 @@ if ($env:APPVEYOR_REPO_NAME -eq $github) {
     }
     else {
         Write-Output "Sonar: Running Sonar in non-preview mode, on branch $env:APPVEYOR_REPO_BRANCH"
-		Write-Output "/k:$sonarQubeId /d:sonar.organization=$sonarOrganization /d:sonar.host.url=$sonarUrl /d:sonar.login=$sonarToken /v:$buildVersion "
-        SonarScanner.MSBuild.exe begin /k:"$sonarQubeId" /d:"sonar.organization=$sonarOrganization" /d:"sonar.host.url=$sonarUrl" /d:"sonar.login=$sonarToken" /v:"$buildVersion"
+		Write-Output "/k:$sonarQubeId /d:sonar.organization=$sonarOrganization /d:sonar.host.url=$sonarUrl /d:sonar.login=$sonarToken /d:sonar.flex.cobertura.reportPath=$reportPath /v:$buildVersion "
+        SonarScanner.MSBuild.exe begin /k:"$sonarQubeId" /d:"sonar.organization=$sonarOrganization" /d:"sonar.host.url=$sonarUrl" /d:"sonar.login=$sonarToken" /d:"sonar.flex.cobertura.reportPath=$reportPath" /v:"$buildVersion"
     }
 
     Write-Output "Sonar: Running msbuild"

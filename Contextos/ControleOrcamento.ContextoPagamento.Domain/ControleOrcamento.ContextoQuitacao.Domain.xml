@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ControleOrcamento.ContextoQuitacao.Domain</name>
+    </assembly>
+    <members>
+        <member name="T:ControleOrcamento.ContextoQuitacao.Domain.Entidades.FormaPagamento">
+            <summary>
+            Representa a forma de pagamento de um lançamento na aplicação
+            </summary>
+        </member>
+        <member name="P:ControleOrcamento.ContextoQuitacao.Domain.Entidades.FormaPagamento.QuantidadeDiasAntecedeFatura">
+            <summary>
+            Representa a quantidade de dias que antecede a fatura para efetuar o calculo do vencimento do lançamento
+            </summary>
+        </member>
+        <member name="P:ControleOrcamento.ContextoQuitacao.Domain.Entidades.FormaPagamento.DiaVenciamentoFatura">
+            <summary>
+            Representa o dia de vencimento da fatura para efetuar o calculo do vencimento do lançamento
+            </summary>
+        </member>
+        <member name="T:ControleOrcamento.ContextoQuitacao.Domain.Entidades.FormaRecebimento">
+            <summary>
+            Representa a forma de recebimento de um lançamento na aplicação
+            </summary>
+        </member>
+        <member name="T:ControleOrcamento.ContextoQuitacao.Domain.Entidades.Quitacao">
+            <summary>
+            Representa a forma de quitação de um lançamento da aplicação
+            </summary>
+        </member>
+        <member name="P:ControleOrcamento.ContextoQuitacao.Domain.Entidades.Quitacao.Descricao">
+            <summary>
+            Representa a drescrição para identificação do registro
+            </summary>
+        </member>
+        <member name="P:ControleOrcamento.ContextoQuitacao.Domain.Entidades.Quitacao.Padrao">
+            <summary>
+            Quando marcado como verdadeiro, o registro será considerado como padrão na inclusão dos lançamentos
+            </summary>
+        </member>
+        <member name="P:ControleOrcamento.ContextoQuitacao.Domain.Entidades.Quitacao.Meio">
+            <summary>
+            Representa a forma por onde foi feita a quitação
+            </summary>
+        </member>
+        <member name="T:ControleOrcamento.ContextoQuitacao.Domain.Enums.Meio">
+            <summary>
+            Representa o meio de pagamento/recebimento no mundo real
+            </summary>
+        </member>
+        <member name="F:ControleOrcamento.ContextoQuitacao.Domain.Enums.Meio.Dinheiro">
+            <summary>
+            Representa quando feito em espécie
+            </summary>
+        </member>
+        <member name="F:ControleOrcamento.ContextoQuitacao.Domain.Enums.Meio.DOC">
+            <summary>
+            Representa quando feito via DOC bancário
+            </summary>
+        </member>
+        <member name="F:ControleOrcamento.ContextoQuitacao.Domain.Enums.Meio.TED">
+            <summary>
+            Representa quando feito via TED bancário
+            </summary>
+        </member>
+        <member name="F:ControleOrcamento.ContextoQuitacao.Domain.Enums.Meio.Cheque">
+            <summary>
+            Representa quando feito via filha de cheque
+            </summary>
+        </member>
+        <member name="F:ControleOrcamento.ContextoQuitacao.Domain.Enums.Meio.CartaoDeCredito">
+            <summary>
+            Representa quando feito via cartão de crédito
+            </summary>
+        </member>
+        <member name="F:ControleOrcamento.ContextoQuitacao.Domain.Enums.Meio.CartaoDeDebito">
+            <summary>
+            Representa quando feito via cartão de débito
+            </summary>
+        </member>
+        <member name="F:ControleOrcamento.ContextoQuitacao.Domain.Enums.Meio.MeioDePagamentoOline">
+            <summary>
+            Representa quando feito via empresa de pagamento online (podendo ser via PayPal / Pic Pay ou etc)
+            </summary>
+        </member>
+    </members>
+</doc>
