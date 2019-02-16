@@ -23,14 +23,14 @@ namespace ControleOrcamento.ContextoUsuario.Domain.Entidades
         /// <summary>
         /// Cria um usuário candidato garantindo seu estado válido
         /// </summary>
-        /// <param name="usuario">Usuário responsável pelo registro</param>
+        /// <param name="usuarioCriacao">Usuário responsável pelo registro</param>
         /// <param name="email"></param>
         /// <param name="nome"></param>
         /// <exception cref="ArgumentNullException">Lançado quando não for informado <paramref name="email"/></exception>
         /// <exception cref="ArgumentException">Lançado quando o <paramref name="email"/> informado náo é válido</exception>
         /// <exception cref="ArgumentNullException">Lançado quando não for informado <paramref name="nome"/></exception>
         /// <exception cref="ArgumentException">Lançado quando o <paramref name="nome"/> informado náo é válido</exception>
-        public UsuarioMaster(UsuarioBase usuario, Email email, NomePessoa nome) : base(usuario, email, nome)
+        public UsuarioMaster(UsuarioBase usuarioCriacao, Email email, NomePessoa nome) : base(usuarioCriacao, email, nome)
         {
 
         }
